@@ -1,0 +1,1426 @@
+Initial changed locations:
+[(0-based:1,1), (0-based:3,3), (0-based:4,4), (0-based:7,7), (0-based:1,0), (0-based:5,4), (0-based:7,6), (0-based:6,4), (0-based:7,5), (0-based:4,7), (0-based:7,4), (0-based:1,4), (0-based:2,7), (0-based:4,1), (0-based:2,4), (0-based:7,1), (0-based:3,4), (0-based:7,0), (0-based:8,4)]
+
+Initial active constraints:
+col(2),row(2),block(1),col(4),row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9)
+
+Initial board
+=============
++----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v7                         . v8                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v2                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v3                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
++----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v3                         . v4                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v6                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v5                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v6                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
++----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v7                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v5                         . v4                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v8                         . v6                         | v9                         . v7                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
+| v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v9                         . v1,v2,v3,v4,v5,v6,v7,v8,v9 | v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 . v1,v2,v3,v4,v5,v6,v7,v8,v9 |
++----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+0: Active constraints at propagation start: col(2),row(2),block(1),col(4),row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9)
+0: 0: Board updated via constraint col(2)
+0: 0: Locations that changed through the update: [(0-based:0,1), (0-based:3,1), (0-based:2,1), (0-based:5,1), (0-based:6,1), (0-based:8,1)]
+0: 0: Updated active constraints: row(2),block(1),col(4),row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1)
+0: 1: Board updated via constraint row(2)
+0: 1: Locations that changed through the update: [(0-based:1,3), (0-based:1,2), (0-based:1,5), (0-based:1,7), (0-based:1,6), (0-based:1,8)]
+0: 1: Updated active constraints: block(1),col(4),row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9)
+0: 2: Board updated via constraint block(1)
+0: 2: Locations that changed through the update: [(0-based:2,2), (0-based:0,0), (0-based:0,1), (0-based:2,0), (0-based:0,2), (0-based:2,1)]
+0: 2: Updated active constraints: col(4),row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2)
+0: 3: Board updated via constraint col(4)
+0: 3: Locations that changed through the update: [(0-based:2,3), (0-based:1,3), (0-based:0,3), (0-based:7,3), (0-based:6,3), (0-based:5,3), (0-based:4,3), (0-based:8,3)]
+0: 3: Updated active constraints: row(4),block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2)
+0: 4: Board updated via constraint row(4)
+0: 4: Locations that changed through the update: [(0-based:3,2), (0-based:3,1), (0-based:3,0), (0-based:3,7), (0-based:3,6), (0-based:3,5), (0-based:3,8)]
+0: 4: Updated active constraints: block(5),col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2)
+0: 5: Board updated via constraint block(5)
+0: 5: Locations that changed through the update: [(0-based:5,5), (0-based:4,5), (0-based:5,3), (0-based:3,5), (0-based:4,3)]
+0: 5: Updated active constraints: col(5),row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4)
+0: 6: Board updated via constraint col(5)
+0: 6: Locations that changed through the update: [(0-based:0,4)]
+0: 6: Updated active constraints: row(5),col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4)
+0: 7: Board updated via constraint row(5)
+0: 7: Locations that changed through the update: [(0-based:4,5), (0-based:4,6), (0-based:4,0), (0-based:4,2), (0-based:4,3), (0-based:4,8)]
+0: 7: Updated active constraints: col(8),row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5)
+0: 8: Board updated via constraint col(8)
+0: 8: Locations that changed through the update: [(0-based:6,7), (0-based:5,7), (0-based:3,7), (0-based:1,7), (0-based:0,7), (0-based:8,7)]
+0: 8: Updated active constraints: row(8),block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5)
+0: 9: Board updated via constraint row(8)
+0: 9: Locations that changed through the update: [(0-based:7,3), (0-based:7,2), (0-based:7,8)]
+0: 9: Updated active constraints: block(9),col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5)
+0: 10: Board updated via constraint block(9)
+0: 10: Locations that changed through the update: [(0-based:8,8), (0-based:6,6), (0-based:6,7), (0-based:8,6), (0-based:6,8), (0-based:8,7)]
+0: 10: Updated active constraints: col(1),row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8)
+0: 11: Board updated via constraint col(1)
+0: 11: Locations that changed through the update: [(0-based:0,0), (0-based:2,0), (0-based:3,0), (0-based:4,0), (0-based:5,0), (0-based:6,0), (0-based:8,0)]
+0: 11: Updated active constraints: row(6),col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5)
+0: 12: Board updated via constraint row(6)
+0: 12: Locations that changed through the update: [(0-based:5,7), (0-based:5,6), (0-based:5,0), (0-based:5,2), (0-based:5,8)]
+0: 12: Updated active constraints: col(7),row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1)
+0: 13: Board updated via constraint col(7)
+0: 13: Locations that changed through the update: [(0-based:4,6), (0-based:5,6), (0-based:2,6), (0-based:3,6), (0-based:0,6), (0-based:1,6)]
+0: 13: Updated active constraints: row(7),block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6)
+0: 14: Board updated via constraint row(7)
+0: 14: Locations that changed through the update: [(0-based:6,5), (0-based:6,2), (0-based:6,3), (0-based:6,1)]
+0: 14: Updated active constraints: block(8),col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6)
+0: 15: Board updated via constraint block(8)
+0: 15: Locations that changed through the update: [(0-based:6,5), (0-based:6,3), (0-based:8,3), (0-based:8,5)]
+0: 15: Updated active constraints: col(6),block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7)
+0: 16: Board updated via constraint col(6)
+0: 16: Locations that changed through the update: [(0-based:1,5), (0-based:0,5), (0-based:2,5)]
+0: 16: Updated active constraints: block(6),block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7)
+0: 17: Board updated via constraint block(6)
+0: 17: Locations that changed through the update: [(0-based:5,6), (0-based:3,6), (0-based:3,8), (0-based:5,8)]
+0: 17: Updated active constraints: block(2),row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7)
+0: 18: Board updated via constraint block(2)
+0: 18: Locations that changed through the update: [(0-based:2,3), (0-based:1,3), (0-based:0,3), (0-based:1,5), (0-based:0,5), (0-based:2,5)]
+0: 18: Updated active constraints: row(3),block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6)
+0: 19: Board updated via constraint row(3)
+0: 19: Locations that changed through the update: [(0-based:2,2), (0-based:2,0), (0-based:2,1), (0-based:2,6), (0-based:2,8)]
+0: 19: Updated active constraints: block(3),block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6)
+0: 20: Board updated via constraint block(3)
+0: 20: Locations that changed through the update: [(0-based:0,6), (0-based:1,6), (0-based:0,8), (0-based:1,8)]
+0: 20: Updated active constraints: block(4),block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6)
+0: 21: Board updated via constraint block(4)
+0: 21: Locations that changed through the update: [(0-based:3,2), (0-based:3,0)]
+0: 21: Updated active constraints: block(7),row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6)
+0: 22: Board updated via constraint block(7)
+0: 22: Locations that changed through the update: [(0-based:6,2), (0-based:6,0), (0-based:6,1), (0-based:8,0), (0-based:8,1), (0-based:8,2)]
+0: 22: Updated active constraints: row(9),row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6)
+0: 23: Board updated via constraint row(9)
+0: 23: Locations that changed through the update: [(0-based:8,0), (0-based:8,1), (0-based:8,2)]
+0: 23: Updated active constraints: row(1),col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7)
+0: 24: Board updated via constraint row(1)
+0: 24: Locations that changed through the update: [(0-based:0,0), (0-based:0,1), (0-based:0,2)]
+0: 24: Updated active constraints: col(3),col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7)
+0: 25: Board updated via constraint col(3)
+0: 25: Locations that changed through the update: []
+0: 25: Updated active constraints: col(9),col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7)
+0: 26: Board updated via constraint col(9)
+0: 26: Locations that changed through the update: []
+0: 26: Updated active constraints: col(2),row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7)
+0: 27: Board updated via constraint col(2)
+0: 27: Locations that changed through the update: []
+0: 27: Updated active constraints: row(2),col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7)
+0: 28: Board updated via constraint row(2)
+0: 28: Locations that changed through the update: [(0-based:1,2)]
+0: 28: Updated active constraints: col(4),row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 29: Board updated via constraint col(4)
+0: 29: Locations that changed through the update: []
+0: 29: Updated active constraints: row(4),block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 30: Board updated via constraint row(4)
+0: 30: Locations that changed through the update: []
+0: 30: Updated active constraints: block(5),col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 31: Board updated via constraint block(5)
+0: 31: Locations that changed through the update: []
+0: 31: Updated active constraints: col(8),block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 32: Board updated via constraint col(8)
+0: 32: Locations that changed through the update: []
+0: 32: Updated active constraints: block(1),row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 33: Board updated via constraint block(1)
+0: 33: Locations that changed through the update: []
+0: 33: Updated active constraints: row(5),col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 34: Board updated via constraint row(5)
+0: 34: Locations that changed through the update: []
+0: 34: Updated active constraints: col(1),row(6),row(7),col(7),col(6),block(7),col(3)
+0: 35: Board updated via constraint col(1)
+0: 35: Locations that changed through the update: []
+0: 35: Updated active constraints: row(6),row(7),col(7),col(6),block(7),col(3)
+0: 36: Board updated via constraint row(6)
+0: 36: Locations that changed through the update: []
+0: 36: Updated active constraints: row(7),col(7),col(6),block(7),col(3)
+0: 37: Board updated via constraint row(7)
+0: 37: Locations that changed through the update: []
+0: 37: Updated active constraints: col(7),col(6),block(7),col(3)
+0: 38: Board updated via constraint col(7)
+0: 38: Locations that changed through the update: []
+0: 38: Updated active constraints: col(6),block(7),col(3)
+0: 39: Board updated via constraint col(6)
+0: 39: Locations that changed through the update: []
+0: 39: Updated active constraints: block(7),col(3)
+0: 40: Board updated via constraint block(7)
+0: 40: Locations that changed through the update: []
+0: 40: Updated active constraints: col(3)
+0: 41: Board updated via constraint col(3)
+0: 41: Locations that changed through the update: [(0-based:6,2), (0-based:7,2), (0-based:4,2), (0-based:5,2), (0-based:8,2)]
+0: 41: Updated active constraints: row(7),block(7),row(8),row(5),block(4),row(6),row(9)
+0: 42: Board updated via constraint row(7)
+0: 42: Locations that changed through the update: []
+0: 42: Updated active constraints: block(7),row(8),row(5),block(4),row(6),row(9)
+0: 43: Board updated via constraint block(7)
+0: 43: Locations that changed through the update: []
+0: 43: Updated active constraints: row(8),row(5),block(4),row(6),row(9)
+0: 44: Board updated via constraint row(8)
+0: 44: Locations that changed through the update: [(0-based:7,8)]
+0: 44: Updated active constraints: row(5),block(4),row(6),row(9),col(9),block(9)
+0: 45: Board updated via constraint row(5)
+0: 45: Locations that changed through the update: []
+0: 45: Updated active constraints: block(4),row(6),row(9),col(9),block(9)
+0: 46: Board updated via constraint block(4)
+0: 46: Locations that changed through the update: []
+0: 46: Updated active constraints: row(6),row(9),col(9),block(9)
+0: 47: Board updated via constraint row(6)
+0: 47: Locations that changed through the update: []
+0: 47: Updated active constraints: row(9),col(9),block(9)
+0: 48: Board updated via constraint row(9)
+0: 48: Locations that changed through the update: []
+0: 48: Updated active constraints: col(9),block(9)
+0: 49: Board updated via constraint col(9)
+0: 49: Locations that changed through the update: [(0-based:8,8), (0-based:4,8), (0-based:5,8), (0-based:6,8)]
+0: 49: Updated active constraints: block(9),row(9),row(5),block(6),row(6),row(7)
+0: 50: Board updated via constraint block(9)
+0: 50: Locations that changed through the update: [(0-based:6,6), (0-based:8,6)]
+0: 50: Updated active constraints: row(9),row(5),block(6),row(6),row(7),col(7)
+0: 51: Board updated via constraint row(9)
+0: 51: Locations that changed through the update: []
+0: 51: Updated active constraints: row(5),block(6),row(6),row(7),col(7)
+0: 52: Board updated via constraint row(5)
+0: 52: Locations that changed through the update: []
+0: 52: Updated active constraints: block(6),row(6),row(7),col(7)
+0: 53: Board updated via constraint block(6)
+0: 53: Locations that changed through the update: []
+0: 53: Updated active constraints: row(6),row(7),col(7)
+0: 54: Board updated via constraint row(6)
+0: 54: Locations that changed through the update: []
+0: 54: Updated active constraints: row(7),col(7)
+0: 55: Board updated via constraint row(7)
+0: 55: Locations that changed through the update: []
+0: 55: Updated active constraints: col(7)
+0: 56: Board updated via constraint col(7)
+0: 56: Locations that changed through the update: []
+0: 56: Updated active constraints: 
+0: Board after propagation quiescence
++-------------------+-------------------+----------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v4,v6,v9    . v1,v2,v5,v9       . v1,v2,v4,v5,v6,v9    | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v2,v4,v5,v6,v7,v8 . v2,v4,v5,v6,v8,v9 . v1,v2,v4,v5,v6,v7,v8,v9 |
+| v7                . v8                . v3                   | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6          . v2,v4,v5,v6,v9    . v2,v4,v5,v6,v9          |
+| v1,v4,v6,v9       . v1,v5,v9          . v1,v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v1,v4,v5,v6,v7,v8    . v3                . v1,v4,v5,v6,v7,v8,v9    |
++-------------------+-------------------+----------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v8,v9       . v1,v2,v5,v7,v9    . v1,v2,v5,v7,v8,v9    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v5,v6,v7,v8       . v2,v5,v6,v8,v9    . v2,v5,v6,v7,v8,v9       |
+| v2,v3,v4,v8,v9    . v6                . v2,v4,v7,v8,v9       | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8       . v1                . v2,v4,v7,v8,v9          |
+| v1,v2,v3,v4,v8,v9 . v1,v2,v3,v5,v7,v9 . v1,v2,v4,v5,v7,v8,v9 | v1,v2,v7,v8,v9    . v6 . v1,v2,v7,v8,v9 | v2,v3,v4,v5,v7,v8    . v2,v4,v5,v8,v9    . v2,v4,v5,v7,v8,v9       |
++-------------------+-------------------+----------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v3,v6,v8,v9 . v1,v2,v3,v9       . v1,v2,v6,v8,v9       | v1,v2,v4,v5       . v7 . v1,v2,v3,v4,v5 | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
+| v5                . v4                . v1,v2                | v1,v2             . v8 . v6             | v9                   . v7                . v3                      |
+| v1,v2,v3,v6,v8    . v1,v2,v3,v7       . v1,v2,v6,v7,v8       | v1,v2,v4,v5       . v9 . v1,v2,v3,v4,v5 | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
++-------------------+-------------------+----------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+0: Need to 'find by trial'
+0: Selected a pivot location (1-based:8,4) with domain [v1,v2]
+0: Trying value v1
+ 1: Active constraints at propagation start: col(4),row(8),block(8)
+ 1: 0: Board updated via constraint col(4)
+ 1: 0: Locations that changed through the update: [(0-based:6,3), (0-based:5,3), (0-based:8,3)]
+ 1: 0: Updated active constraints: row(8),block(8),row(7),row(6),block(5),row(9)
+ 1: 1: Board updated via constraint row(8)
+ 1: 1: Locations that changed through the update: [(0-based:7,2)]
+ 1: 1: Updated active constraints: block(8),row(7),row(6),block(5),row(9),col(3),block(7)
+ 1: 2: Board updated via constraint block(8)
+ 1: 2: Locations that changed through the update: [(0-based:6,5), (0-based:8,5)]
+ 1: 2: Updated active constraints: row(7),row(6),block(5),row(9),col(3),block(7),col(6)
+ 1: 3: Board updated via constraint row(7)
+ 1: 3: Locations that changed through the update: []
+ 1: 3: Updated active constraints: row(6),block(5),row(9),col(3),block(7),col(6)
+ 1: 4: Board updated via constraint row(6)
+ 1: 4: Locations that changed through the update: []
+ 1: 4: Updated active constraints: block(5),row(9),col(3),block(7),col(6)
+ 1: 5: Board updated via constraint block(5)
+ 1: 5: Locations that changed through the update: []
+ 1: 5: Updated active constraints: row(9),col(3),block(7),col(6)
+ 1: 6: Board updated via constraint row(9)
+ 1: 6: Locations that changed through the update: []
+ 1: 6: Updated active constraints: col(3),block(7),col(6)
+ 1: 7: Board updated via constraint col(3)
+ 1: 7: Locations that changed through the update: [(0-based:3,2), (0-based:0,2), (0-based:6,2), (0-based:4,2), (0-based:5,2), (0-based:8,2)]
+ 1: 7: Updated active constraints: block(7),col(6),row(4),block(4),row(1),block(1),row(7),row(5),row(6),row(9)
+ 1: 8: Board updated via constraint block(7)
+ 1: 8: Locations that changed through the update: [(0-based:6,0), (0-based:6,1), (0-based:8,0), (0-based:8,1)]
+ 1: 8: Updated active constraints: col(6),row(4),block(4),row(1),block(1),row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 9: Board updated via constraint col(6)
+ 1: 9: Locations that changed through the update: []
+ 1: 9: Updated active constraints: row(4),block(4),row(1),block(1),row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 10: Board updated via constraint row(4)
+ 1: 10: Locations that changed through the update: []
+ 1: 10: Updated active constraints: block(4),row(1),block(1),row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 11: Board updated via constraint block(4)
+ 1: 11: Locations that changed through the update: []
+ 1: 11: Updated active constraints: row(1),block(1),row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 12: Board updated via constraint row(1)
+ 1: 12: Locations that changed through the update: []
+ 1: 12: Updated active constraints: block(1),row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 13: Board updated via constraint block(1)
+ 1: 13: Locations that changed through the update: []
+ 1: 13: Updated active constraints: row(7),row(5),row(6),row(9),col(1),col(2)
+ 1: 14: Board updated via constraint row(7)
+ 1: 14: Locations that changed through the update: []
+ 1: 14: Updated active constraints: row(5),row(6),row(9),col(1),col(2)
+ 1: 15: Board updated via constraint row(5)
+ 1: 15: Locations that changed through the update: []
+ 1: 15: Updated active constraints: row(6),row(9),col(1),col(2)
+ 1: 16: Board updated via constraint row(6)
+ 1: 16: Locations that changed through the update: []
+ 1: 16: Updated active constraints: row(9),col(1),col(2)
+ 1: 17: Board updated via constraint row(9)
+ 1: 17: Locations that changed through the update: []
+ 1: 17: Updated active constraints: col(1),col(2)
+ 1: 18: Board updated via constraint col(1)
+ 1: 18: Locations that changed through the update: []
+ 1: 18: Updated active constraints: col(2)
+ 1: 19: Board updated via constraint col(2)
+ 1: 19: Locations that changed through the update: []
+ 1: 19: Updated active constraints: 
+ 1: Board after propagation quiescence
++-------------------+-------------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v4,v6,v9    . v1,v2,v5,v9       . v1,v4,v5,v6,v9    | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v2,v4,v5,v6,v7,v8 . v2,v4,v5,v6,v8,v9 . v1,v2,v4,v5,v6,v7,v8,v9 |
+| v7                . v8                . v3                | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6          . v2,v4,v5,v6,v9    . v2,v4,v5,v6,v9          |
+| v1,v4,v6,v9       . v1,v5,v9          . v1,v4,v5,v6,v9    | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v1,v4,v5,v6,v7,v8    . v3                . v1,v4,v5,v6,v7,v8,v9    |
++-------------------+-------------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v8,v9       . v1,v2,v5,v7,v9    . v1,v5,v7,v8,v9    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v5,v6,v7,v8       . v2,v5,v6,v8,v9    . v2,v5,v6,v7,v8,v9       |
+| v2,v3,v4,v8,v9    . v6                . v4,v7,v8,v9       | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8       . v1                . v2,v4,v7,v8,v9          |
+| v1,v2,v3,v4,v8,v9 . v1,v2,v3,v5,v7,v9 . v1,v4,v5,v7,v8,v9 | v2,v7,v8,v9       . v6 . v1,v2,v7,v8,v9 | v2,v3,v4,v5,v7,v8    . v2,v4,v5,v8,v9    . v2,v4,v5,v7,v8,v9       |
++-------------------+-------------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v3,v6,v8,v9    . v1,v3,v9          . v1,v6,v8,v9       | v2,v4,v5          . v7 . v2,v3,v4,v5    | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
+| v5                . v4                . v2                | v1                . v8 . v6             | v9                   . v7                . v3                      |
+| v1,v3,v6,v8       . v1,v3,v7          . v1,v6,v7,v8       | v2,v4,v5          . v9 . v2,v3,v4,v5    | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
++-------------------+-------------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+ 1: Need to 'find by trial'
+ 1: Selected a pivot location (1-based:3,2) with domain [v1,v5,v9]
+ 1: Trying value v1
+  2: Active constraints at propagation start: col(2),row(3),block(1)
+  2: 0: Board updated via constraint col(2)
+  2: 0: Locations that changed through the update: [(0-based:0,1), (0-based:3,1), (0-based:5,1), (0-based:6,1), (0-based:8,1)]
+  2: 0: Updated active constraints: row(3),block(1),row(1),row(4),block(4),row(6),row(7),block(7),row(9)
+  2: 1: Board updated via constraint row(3)
+  2: 1: Locations that changed through the update: [(0-based:2,2), (0-based:2,0), (0-based:2,6), (0-based:2,8)]
+  2: 1: Updated active constraints: block(1),row(1),row(4),block(4),row(6),row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 2: Board updated via constraint block(1)
+  2: 2: Locations that changed through the update: [(0-based:0,0), (0-based:0,2)]
+  2: 2: Updated active constraints: row(1),row(4),block(4),row(6),row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 3: Board updated via constraint row(1)
+  2: 3: Locations that changed through the update: []
+  2: 3: Updated active constraints: row(4),block(4),row(6),row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 4: Board updated via constraint row(4)
+  2: 4: Locations that changed through the update: []
+  2: 4: Updated active constraints: block(4),row(6),row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 5: Board updated via constraint block(4)
+  2: 5: Locations that changed through the update: []
+  2: 5: Updated active constraints: row(6),row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 6: Board updated via constraint row(6)
+  2: 6: Locations that changed through the update: []
+  2: 6: Updated active constraints: row(7),block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 7: Board updated via constraint row(7)
+  2: 7: Locations that changed through the update: []
+  2: 7: Updated active constraints: block(7),row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 8: Board updated via constraint block(7)
+  2: 8: Locations that changed through the update: []
+  2: 8: Updated active constraints: row(9),col(3),col(1),col(7),block(3),col(9)
+  2: 9: Board updated via constraint row(9)
+  2: 9: Locations that changed through the update: []
+  2: 9: Updated active constraints: col(3),col(1),col(7),block(3),col(9)
+  2: 10: Board updated via constraint col(3)
+  2: 10: Locations that changed through the update: []
+  2: 10: Updated active constraints: col(1),col(7),block(3),col(9)
+  2: 11: Board updated via constraint col(1)
+  2: 11: Locations that changed through the update: []
+  2: 11: Updated active constraints: col(7),block(3),col(9)
+  2: 12: Board updated via constraint col(7)
+  2: 12: Locations that changed through the update: []
+  2: 12: Updated active constraints: block(3),col(9)
+  2: 13: Board updated via constraint block(3)
+  2: 13: Locations that changed through the update: []
+  2: 13: Updated active constraints: col(9)
+  2: 14: Board updated via constraint col(9)
+  2: 14: Locations that changed through the update: []
+  2: 14: Updated active constraints: 
+  2: Board after propagation quiescence
++-------------------+----------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v2,v4,v6,v9       . v2,v5,v9       . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v2,v4,v5,v6,v7,v8 . v2,v4,v5,v6,v8,v9 . v1,v2,v4,v5,v6,v7,v8,v9 |
+| v7                . v8             . v3                | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6          . v2,v4,v5,v6,v9    . v2,v4,v5,v6,v9          |
+| v4,v6,v9          . v1             . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v6,v7,v8       . v3                . v4,v5,v6,v7,v8,v9       |
++-------------------+----------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v8,v9       . v2,v5,v7,v9    . v1,v5,v7,v8,v9    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v5,v6,v7,v8       . v2,v5,v6,v8,v9    . v2,v5,v6,v7,v8,v9       |
+| v2,v3,v4,v8,v9    . v6             . v4,v7,v8,v9       | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8       . v1                . v2,v4,v7,v8,v9          |
+| v1,v2,v3,v4,v8,v9 . v2,v3,v5,v7,v9 . v1,v4,v5,v7,v8,v9 | v2,v7,v8,v9       . v6 . v1,v2,v7,v8,v9 | v2,v3,v4,v5,v7,v8    . v2,v4,v5,v8,v9    . v2,v4,v5,v7,v8,v9       |
++-------------------+----------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v3,v6,v8,v9    . v3,v9          . v1,v6,v8,v9       | v2,v4,v5          . v7 . v2,v3,v4,v5    | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
+| v5                . v4             . v2                | v1                . v8 . v6             | v9                   . v7                . v3                      |
+| v1,v3,v6,v8       . v3,v7          . v1,v6,v7,v8       | v2,v4,v5          . v9 . v2,v3,v4,v5    | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
++-------------------+----------------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+  2: Need to 'find by trial'
+  2: Selected a pivot location (1-based:7,2) with domain [v3,v9]
+  2: Trying value v3
+   3: Active constraints at propagation start: col(2),row(7),block(7)
+   3: 0: Board updated via constraint col(2)
+   3: 0: Locations that changed through the update: [(0-based:3,1), (0-based:5,1), (0-based:8,1)]
+   3: 0: Updated active constraints: row(7),block(7),row(4),block(4),row(6),row(9)
+   3: 1: Board updated via constraint row(7)
+   3: 1: Locations that changed through the update: [(0-based:6,5), (0-based:6,0)]
+   3: 1: Updated active constraints: block(7),row(4),block(4),row(6),row(9),col(6),block(8),col(1)
+   3: 2: Board updated via constraint block(7)
+   3: 2: Locations that changed through the update: [(0-based:8,0), (0-based:8,2)]
+   3: 2: Updated active constraints: row(4),block(4),row(6),row(9),col(6),block(8),col(1),col(3)
+   3: 3: Board updated via constraint row(4)
+   3: 3: Locations that changed through the update: []
+   3: 3: Updated active constraints: block(4),row(6),row(9),col(6),block(8),col(1),col(3)
+   3: 4: Board updated via constraint block(4)
+   3: 4: Locations that changed through the update: []
+   3: 4: Updated active constraints: row(6),row(9),col(6),block(8),col(1),col(3)
+   3: 5: Board updated via constraint row(6)
+   3: 5: Locations that changed through the update: []
+   3: 5: Updated active constraints: row(9),col(6),block(8),col(1),col(3)
+   3: 6: Board updated via constraint row(9)
+   3: 6: Locations that changed through the update: [(0-based:8,5)]
+   3: 6: Updated active constraints: col(6),block(8),col(1),col(3)
+   3: 7: Board updated via constraint col(6)
+   3: 7: Locations that changed through the update: []
+   3: 7: Updated active constraints: block(8),col(1),col(3)
+   3: 8: Board updated via constraint block(8)
+   3: 8: Locations that changed through the update: []
+   3: 8: Updated active constraints: col(1),col(3)
+   3: 9: Board updated via constraint col(1)
+   3: 9: Locations that changed through the update: []
+   3: 9: Updated active constraints: col(3)
+   3: 10: Board updated via constraint col(3)
+   3: 10: Locations that changed through the update: []
+   3: 10: Updated active constraints: 
+   3: Board after propagation quiescence
++-------------------+----------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v2,v4,v6,v9       . v2,v5,v9 . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v2,v4,v5,v6,v7,v8 . v2,v4,v5,v6,v8,v9 . v1,v2,v4,v5,v6,v7,v8,v9 |
+| v7                . v8       . v3                | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6          . v2,v4,v5,v6,v9    . v2,v4,v5,v6,v9          |
+| v4,v6,v9          . v1       . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v6,v7,v8       . v3                . v4,v5,v6,v7,v8,v9       |
++-------------------+----------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v2,v8,v9       . v2,v5,v9 . v1,v5,v7,v8,v9    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v5,v6,v7,v8       . v2,v5,v6,v8,v9    . v2,v5,v6,v7,v8,v9       |
+| v2,v3,v4,v8,v9    . v6       . v4,v7,v8,v9       | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8       . v1                . v2,v4,v7,v8,v9          |
+| v1,v2,v3,v4,v8,v9 . v2,v5,v9 . v1,v4,v5,v7,v8,v9 | v2,v7,v8,v9       . v6 . v1,v2,v7,v8,v9 | v2,v3,v4,v5,v7,v8    . v2,v4,v5,v8,v9    . v2,v4,v5,v7,v8,v9       |
++-------------------+----------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+| v1,v6,v8,v9       . v3       . v1,v6,v8,v9       | v2,v4,v5          . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
+| v5                . v4       . v2                | v1                . v8 . v6             | v9                   . v7                . v3                      |
+| v1,v6,v8          . v7       . v1,v6,v8          | v2,v4,v5          . v9 . v3             | v1,v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8    . v1,v2,v4,v5,v6,v8       |
++-------------------+----------+-------------------+-------------------+----+----------------+----------------------+-------------------+-------------------------+
+   3: Need to 'find by trial'
+   3: Selected a pivot location (1-based:1,2) with domain [v2,v5,v9]
+   3: Trying value v2
+    4: Active constraints at propagation start: col(2),row(1),block(1)
+    4: 0: Board updated via constraint col(2)
+    4: 0: Locations that changed through the update: [(0-based:3,1), (0-based:5,1)]
+    4: 0: Updated active constraints: row(1),block(1),row(4),block(4),row(6)
+    4: 1: Board updated via constraint row(1)
+    4: 1: Locations that changed through the update: [(0-based:0,0), (0-based:0,6), (0-based:0,7), (0-based:0,8)]
+    4: 1: Updated active constraints: block(1),row(4),block(4),row(6),col(1),col(7),block(3),col(8),col(9)
+    4: 2: Board updated via constraint block(1)
+    4: 2: Locations that changed through the update: []
+    4: 2: Updated active constraints: row(4),block(4),row(6),col(1),col(7),block(3),col(8),col(9)
+    4: 3: Board updated via constraint row(4)
+    4: 3: Locations that changed through the update: []
+    4: 3: Updated active constraints: block(4),row(6),col(1),col(7),block(3),col(8),col(9)
+    4: 4: Board updated via constraint block(4)
+    4: 4: Locations that changed through the update: []
+    4: 4: Updated active constraints: row(6),col(1),col(7),block(3),col(8),col(9)
+    4: 5: Board updated via constraint row(6)
+    4: 5: Locations that changed through the update: []
+    4: 5: Updated active constraints: col(1),col(7),block(3),col(8),col(9)
+    4: 6: Board updated via constraint col(1)
+    4: 6: Locations that changed through the update: []
+    4: 6: Updated active constraints: col(7),block(3),col(8),col(9)
+    4: 7: Board updated via constraint col(7)
+    4: 7: Locations that changed through the update: []
+    4: 7: Updated active constraints: block(3),col(8),col(9)
+    4: 8: Board updated via constraint block(3)
+    4: 8: Locations that changed through the update: []
+    4: 8: Updated active constraints: col(8),col(9)
+    4: 9: Board updated via constraint col(8)
+    4: 9: Locations that changed through the update: []
+    4: 9: Updated active constraints: col(9)
+    4: 10: Board updated via constraint col(9)
+    4: 10: Locations that changed through the update: []
+    4: 10: Updated active constraints: 
+    4: Board after propagation quiescence
++-------------------+-------+-------------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v4,v6,v9          . v2    . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v4,v5,v6,v7,v8 . v4,v5,v6,v8,v9 . v1,v4,v5,v6,v7,v8,v9 |
+| v7                . v8    . v3                | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9       |
+| v4,v6,v9          . v1    . v4,v5,v6,v9       | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v6,v7,v8    . v3             . v4,v5,v6,v7,v8,v9    |
++-------------------+-------+-------------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v1,v2,v8,v9       . v5,v9 . v1,v5,v7,v8,v9    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v5,v6,v7,v8    . v2,v5,v6,v8,v9 . v2,v5,v6,v7,v8,v9    |
+| v2,v3,v4,v8,v9    . v6    . v4,v7,v8,v9       | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9       |
+| v1,v2,v3,v4,v8,v9 . v5,v9 . v1,v4,v5,v7,v8,v9 | v2,v7,v8,v9       . v6 . v1,v2,v7,v8,v9 | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8,v9 . v2,v4,v5,v7,v8,v9    |
++-------------------+-------+-------------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v1,v6,v8,v9       . v3    . v1,v6,v8,v9       | v2,v4,v5          . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8    |
+| v5                . v4    . v2                | v1                . v8 . v6             | v9                . v7             . v3                   |
+| v1,v6,v8          . v7    . v1,v6,v8          | v2,v4,v5          . v9 . v3             | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8    |
++-------------------+-------+-------------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+    4: Need to 'find by trial'
+    4: Selected a pivot location (1-based:4,2) with domain [v5,v9]
+    4: Trying value v5
+     5: Active constraints at propagation start: col(2),row(4),block(4)
+     5: 0: Board updated via constraint col(2)
+     5: 0: Locations that changed through the update: [(0-based:5,1)]
+     5: 0: Updated active constraints: row(4),block(4),row(6)
+     5: 1: Board updated via constraint row(4)
+     5: 1: Locations that changed through the update: [(0-based:3,2), (0-based:3,7), (0-based:3,6), (0-based:3,8)]
+     5: 1: Updated active constraints: block(4),row(6),col(3),col(8),block(6),col(7),col(9)
+     5: 2: Board updated via constraint block(4)
+     5: 2: Locations that changed through the update: [(0-based:3,2), (0-based:3,0), (0-based:4,0), (0-based:5,0), (0-based:4,2), (0-based:5,2)]
+     5: 2: Updated active constraints: row(6),col(3),col(8),block(6),col(7),col(9),row(4),col(1),row(5)
+     5: 3: Board updated via constraint row(6)
+     5: 3: Locations that changed through the update: [(0-based:5,5), (0-based:5,7), (0-based:5,3), (0-based:5,8)]
+     5: 3: Updated active constraints: col(3),col(8),block(6),col(7),col(9),row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 4: Board updated via constraint col(3)
+     5: 4: Locations that changed through the update: []
+     5: 4: Updated active constraints: col(8),block(6),col(7),col(9),row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 5: Board updated via constraint col(8)
+     5: 5: Locations that changed through the update: []
+     5: 5: Updated active constraints: block(6),col(7),col(9),row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 6: Board updated via constraint block(6)
+     5: 6: Locations that changed through the update: []
+     5: 6: Updated active constraints: col(7),col(9),row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 7: Board updated via constraint col(7)
+     5: 7: Locations that changed through the update: []
+     5: 7: Updated active constraints: col(9),row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 8: Board updated via constraint col(9)
+     5: 8: Locations that changed through the update: []
+     5: 8: Updated active constraints: row(4),col(1),row(5),col(6),block(5),col(4)
+     5: 9: Board updated via constraint row(4)
+     5: 9: Locations that changed through the update: []
+     5: 9: Updated active constraints: col(1),row(5),col(6),block(5),col(4)
+     5: 10: Board updated via constraint col(1)
+     5: 10: Locations that changed through the update: []
+     5: 10: Updated active constraints: row(5),col(6),block(5),col(4)
+     5: 11: Board updated via constraint row(5)
+     5: 11: Locations that changed through the update: []
+     5: 11: Updated active constraints: col(6),block(5),col(4)
+     5: 12: Board updated via constraint col(6)
+     5: 12: Locations that changed through the update: []
+     5: 12: Updated active constraints: block(5),col(4)
+     5: 13: Board updated via constraint block(5)
+     5: 13: Locations that changed through the update: []
+     5: 13: Updated active constraints: col(4)
+     5: 14: Board updated via constraint col(4)
+     5: 14: Locations that changed through the update: []
+     5: 14: Updated active constraints: 
+     5: Board after propagation quiescence
++----------------+----+-------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v4,v6,v9       . v2 . v4,v5,v6,v9 | v4,v5,v6,v7,v8,v9 . v3 . v4,v5,v7,v8,v9 | v1,v4,v5,v6,v7,v8 . v4,v5,v6,v8,v9 . v1,v4,v5,v6,v7,v8,v9 |
+| v7             . v8 . v3          | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9       |
+| v4,v6,v9       . v1 . v4,v5,v6,v9 | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v6,v7,v8    . v3             . v4,v5,v6,v7,v8,v9    |
++----------------+----+-------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v1,v2,v8       . v5 . v1,v7,v8    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v6,v7,v8       . v2,v6,v8,v9    . v2,v6,v7,v8,v9       |
+| v2,v3,v4,v8    . v6 . v4,v7,v8    | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9       |
+| v1,v2,v3,v4,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8          . v6 . v1,v2,v7,v8    | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8       |
++----------------+----+-------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+| v1,v6,v8,v9    . v3 . v1,v6,v8,v9 | v2,v4,v5          . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8    |
+| v5             . v4 . v2          | v1                . v8 . v6             | v9                . v7             . v3                   |
+| v1,v6,v8       . v7 . v1,v6,v8    | v2,v4,v5          . v9 . v3             | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8    |
++----------------+----+-------------+-------------------+----+----------------+-------------------+----------------+----------------------+
+     5: Need to 'find by trial'
+     5: Selected a pivot location (1-based:1,1) with domain [v4,v6,v9]
+     5: Trying value v4
+      6: Active constraints at propagation start: col(1),row(1),block(1)
+      6: 0: Board updated via constraint col(1)
+      6: 0: Locations that changed through the update: [(0-based:2,0), (0-based:4,0), (0-based:5,0)]
+      6: 0: Updated active constraints: row(1),block(1),row(3),row(5),block(4),row(6)
+      6: 1: Board updated via constraint row(1)
+      6: 1: Locations that changed through the update: [(0-based:0,2), (0-based:0,3), (0-based:0,5), (0-based:0,6), (0-based:0,7), (0-based:0,8)]
+      6: 1: Updated active constraints: block(1),row(3),row(5),block(4),row(6),col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 2: Board updated via constraint block(1)
+      6: 2: Locations that changed through the update: [(0-based:2,2)]
+      6: 2: Updated active constraints: row(3),row(5),block(4),row(6),col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 3: Board updated via constraint row(3)
+      6: 3: Locations that changed through the update: []
+      6: 3: Updated active constraints: row(5),block(4),row(6),col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 4: Board updated via constraint row(5)
+      6: 4: Locations that changed through the update: []
+      6: 4: Updated active constraints: block(4),row(6),col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 5: Board updated via constraint block(4)
+      6: 5: Locations that changed through the update: []
+      6: 5: Updated active constraints: row(6),col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 6: Board updated via constraint row(6)
+      6: 6: Locations that changed through the update: []
+      6: 6: Updated active constraints: col(3),col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 7: Board updated via constraint col(3)
+      6: 7: Locations that changed through the update: []
+      6: 7: Updated active constraints: col(4),block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 8: Board updated via constraint col(4)
+      6: 8: Locations that changed through the update: []
+      6: 8: Updated active constraints: block(2),col(6),col(7),block(3),col(8),col(9)
+      6: 9: Board updated via constraint block(2)
+      6: 9: Locations that changed through the update: []
+      6: 9: Updated active constraints: col(6),col(7),block(3),col(8),col(9)
+      6: 10: Board updated via constraint col(6)
+      6: 10: Locations that changed through the update: []
+      6: 10: Updated active constraints: col(7),block(3),col(8),col(9)
+      6: 11: Board updated via constraint col(7)
+      6: 11: Locations that changed through the update: []
+      6: 11: Updated active constraints: block(3),col(8),col(9)
+      6: 12: Board updated via constraint block(3)
+      6: 12: Locations that changed through the update: []
+      6: 12: Updated active constraints: col(8),col(9)
+      6: 13: Board updated via constraint col(8)
+      6: 13: Locations that changed through the update: []
+      6: 13: Updated active constraints: col(9)
+      6: 14: Board updated via constraint col(9)
+      6: 14: Locations that changed through the update: []
+      6: 14: Updated active constraints: 
+      6: Board after propagation quiescence
++-------------+----+-------------+-------------------+----+----------------+-------------------+----------------+-------------------+
+| v4          . v2 . v5,v6,v9    | v5,v6,v7,v8,v9    . v3 . v5,v7,v8,v9    | v1,v5,v6,v7,v8    . v5,v6,v8,v9    . v1,v5,v6,v7,v8,v9 |
+| v7          . v8 . v3          | v4,v5,v6,v9       . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6,v9       . v1 . v5,v6,v9    | v4,v5,v6,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v6,v7,v8    . v3             . v4,v5,v6,v7,v8,v9 |
++-------------+----+-------------+-------------------+----+----------------+-------------------+----------------+-------------------+
+| v1,v2,v8    . v5 . v1,v7,v8    | v3                . v4 . v1,v2,v7,v8,v9 | v2,v6,v7,v8       . v2,v6,v8,v9    . v2,v6,v7,v8,v9    |
+| v2,v3,v8    . v6 . v4,v7,v8    | v2,v7,v8,v9       . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9    |
+| v1,v2,v3,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8          . v6 . v1,v2,v7,v8    | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8    |
++-------------+----+-------------+-------------------+----+----------------+-------------------+----------------+-------------------+
+| v1,v6,v8,v9 . v3 . v1,v6,v8,v9 | v2,v4,v5          . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5          . v4 . v2          | v1                . v8 . v6             | v9                . v7             . v3                |
+| v1,v6,v8    . v7 . v1,v6,v8    | v2,v4,v5          . v9 . v3             | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
++-------------+----+-------------+-------------------+----+----------------+-------------------+----------------+-------------------+
+      6: Need to 'find by trial'
+      6: Selected a pivot location (1-based:3,1) with domain [v6,v9]
+      6: Trying value v6
+       7: Active constraints at propagation start: col(1),row(3),block(1)
+       7: 0: Board updated via constraint col(1)
+       7: 0: Locations that changed through the update: [(0-based:6,0), (0-based:8,0)]
+       7: 0: Updated active constraints: row(3),block(1),row(7),block(7),row(9)
+       7: 1: Board updated via constraint row(3)
+       7: 1: Locations that changed through the update: [(0-based:2,2), (0-based:2,3), (0-based:2,6), (0-based:2,8)]
+       7: 1: Updated active constraints: block(1),row(7),block(7),row(9),col(3),col(4),block(2),col(7),block(3),col(9)
+       7: 2: Board updated via constraint block(1)
+       7: 2: Locations that changed through the update: [(0-based:0,2)]
+       7: 2: Updated active constraints: row(7),block(7),row(9),col(3),col(4),block(2),col(7),block(3),col(9),row(1)
+       7: 3: Board updated via constraint row(7)
+       7: 3: Locations that changed through the update: [(0-based:6,2)]
+       7: 3: Updated active constraints: block(7),row(9),col(3),col(4),block(2),col(7),block(3),col(9),row(1)
+       7: 4: Board updated via constraint block(7)
+       7: 4: Locations that changed through the update: []
+       7: 4: Updated active constraints: row(9),col(3),col(4),block(2),col(7),block(3),col(9),row(1)
+       7: 5: Board updated via constraint row(9)
+       7: 5: Locations that changed through the update: []
+       7: 5: Updated active constraints: col(3),col(4),block(2),col(7),block(3),col(9),row(1)
+       7: 6: Board updated via constraint col(3)
+       7: 6: Locations that changed through the update: []
+       7: 6: Updated active constraints: col(4),block(2),col(7),block(3),col(9),row(1)
+       7: 7: Board updated via constraint col(4)
+       7: 7: Locations that changed through the update: []
+       7: 7: Updated active constraints: block(2),col(7),block(3),col(9),row(1)
+       7: 8: Board updated via constraint block(2)
+       7: 8: Locations that changed through the update: []
+       7: 8: Updated active constraints: col(7),block(3),col(9),row(1)
+       7: 9: Board updated via constraint col(7)
+       7: 9: Locations that changed through the update: []
+       7: 9: Updated active constraints: block(3),col(9),row(1)
+       7: 10: Board updated via constraint block(3)
+       7: 10: Locations that changed through the update: []
+       7: 10: Updated active constraints: col(9),row(1)
+       7: 11: Board updated via constraint col(9)
+       7: 11: Locations that changed through the update: []
+       7: 11: Updated active constraints: row(1)
+       7: 12: Board updated via constraint row(1)
+       7: 12: Locations that changed through the update: []
+       7: 12: Updated active constraints: 
+       7: Board after propagation quiescence
++-------------+----+-------------+----------------+----+----------------+-------------------+----------------+-------------------+
+| v4          . v2 . v5,v9       | v5,v6,v7,v8,v9 . v3 . v5,v7,v8,v9    | v1,v5,v6,v7,v8    . v5,v6,v8,v9    . v1,v5,v6,v7,v8,v9 |
+| v7          . v8 . v3          | v4,v5,v6,v9    . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6          . v1 . v5,v9       | v4,v5,v7,v8,v9 . v2 . v4,v5,v7,v8,v9 | v4,v5,v7,v8       . v3             . v4,v5,v7,v8,v9    |
++-------------+----+-------------+----------------+----+----------------+-------------------+----------------+-------------------+
+| v1,v2,v8    . v5 . v1,v7,v8    | v3             . v4 . v1,v2,v7,v8,v9 | v2,v6,v7,v8       . v2,v6,v8,v9    . v2,v6,v7,v8,v9    |
+| v2,v3,v8    . v6 . v4,v7,v8    | v2,v7,v8,v9    . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9    |
+| v1,v2,v3,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8       . v6 . v1,v2,v7,v8    | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8    |
++-------------+----+-------------+----------------+----+----------------+-------------------+----------------+-------------------+
+| v9          . v3 . v1,v6,v8    | v2,v4,v5       . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5          . v4 . v2          | v1             . v8 . v6             | v9                . v7             . v3                |
+| v1,v8       . v7 . v1,v6,v8    | v2,v4,v5       . v9 . v3             | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
++-------------+----+-------------+----------------+----+----------------+-------------------+----------------+-------------------+
+       7: Need to 'find by trial'
+       7: Selected a pivot location (1-based:3,3) with domain [v5,v9]
+       7: Trying value v5
+        8: Active constraints at propagation start: col(3),row(3),block(1)
+        8: 0: Board updated via constraint col(3)
+        8: 0: Locations that changed through the update: [(0-based:0,2)]
+        8: 0: Updated active constraints: row(3),block(1),row(1)
+        8: 1: Board updated via constraint row(3)
+        8: 1: Locations that changed through the update: [(0-based:2,3), (0-based:2,6), (0-based:2,5), (0-based:2,8)]
+        8: 1: Updated active constraints: block(1),row(1),col(4),block(2),col(7),block(3),col(6),col(9)
+        8: 2: Board updated via constraint block(1)
+        8: 2: Locations that changed through the update: []
+        8: 2: Updated active constraints: row(1),col(4),block(2),col(7),block(3),col(6),col(9)
+        8: 3: Board updated via constraint row(1)
+        8: 3: Locations that changed through the update: [(0-based:0,3), (0-based:0,5), (0-based:0,7), (0-based:0,8)]
+        8: 3: Updated active constraints: col(4),block(2),col(7),block(3),col(6),col(9),col(8)
+        8: 4: Board updated via constraint col(4)
+        8: 4: Locations that changed through the update: []
+        8: 4: Updated active constraints: block(2),col(7),block(3),col(6),col(9),col(8)
+        8: 5: Board updated via constraint block(2)
+        8: 5: Locations that changed through the update: []
+        8: 5: Updated active constraints: col(7),block(3),col(6),col(9),col(8)
+        8: 6: Board updated via constraint col(7)
+        8: 6: Locations that changed through the update: []
+        8: 6: Updated active constraints: block(3),col(6),col(9),col(8)
+        8: 7: Board updated via constraint block(3)
+        8: 7: Locations that changed through the update: []
+        8: 7: Updated active constraints: col(6),col(9),col(8)
+        8: 8: Board updated via constraint col(6)
+        8: 8: Locations that changed through the update: []
+        8: 8: Updated active constraints: col(9),col(8)
+        8: 9: Board updated via constraint col(9)
+        8: 9: Locations that changed through the update: []
+        8: 9: Updated active constraints: col(8)
+        8: 10: Board updated via constraint col(8)
+        8: 10: Locations that changed through the update: []
+        8: 10: Updated active constraints: 
+        8: Board after propagation quiescence
++-------------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v4          . v2 . v9          | v5,v6,v7,v8 . v3 . v5,v7,v8       | v1,v5,v6,v7,v8    . v5,v6,v8       . v1,v5,v6,v7,v8    |
+| v7          . v8 . v3          | v4,v5,v6,v9 . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6          . v1 . v5          | v4,v7,v8,v9 . v2 . v4,v7,v8,v9    | v4,v7,v8          . v3             . v4,v7,v8,v9       |
++-------------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v1,v2,v8    . v5 . v1,v7,v8    | v3          . v4 . v1,v2,v7,v8,v9 | v2,v6,v7,v8       . v2,v6,v8,v9    . v2,v6,v7,v8,v9    |
+| v2,v3,v8    . v6 . v4,v7,v8    | v2,v7,v8,v9 . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9    |
+| v1,v2,v3,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8    . v6 . v1,v2,v7,v8    | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8    |
++-------------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v9          . v3 . v1,v6,v8    | v2,v4,v5    . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5          . v4 . v2          | v1          . v8 . v6             | v9                . v7             . v3                |
+| v1,v8       . v7 . v1,v6,v8    | v2,v4,v5    . v9 . v3             | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
++-------------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+        8: Need to 'find by trial'
+        8: Selected a pivot location (1-based:9,1) with domain [v1,v8]
+        8: Trying value v1
+         9: Active constraints at propagation start: col(1),row(9),block(7)
+         9: 0: Board updated via constraint col(1)
+         9: 0: Locations that changed through the update: [(0-based:3,0), (0-based:5,0)]
+         9: 0: Updated active constraints: row(9),block(7),row(4),block(4),row(6)
+         9: 1: Board updated via constraint row(9)
+         9: 1: Locations that changed through the update: [(0-based:8,8), (0-based:8,2), (0-based:8,6)]
+         9: 1: Updated active constraints: block(7),row(4),block(4),row(6),col(9),block(9),col(3),col(7)
+         9: 2: Board updated via constraint block(7)
+         9: 2: Locations that changed through the update: [(0-based:6,2)]
+         9: 2: Updated active constraints: row(4),block(4),row(6),col(9),block(9),col(3),col(7),row(7)
+         9: 3: Board updated via constraint row(4)
+         9: 3: Locations that changed through the update: []
+         9: 3: Updated active constraints: block(4),row(6),col(9),block(9),col(3),col(7),row(7)
+         9: 4: Board updated via constraint block(4)
+         9: 4: Locations that changed through the update: []
+         9: 4: Updated active constraints: row(6),col(9),block(9),col(3),col(7),row(7)
+         9: 5: Board updated via constraint row(6)
+         9: 5: Locations that changed through the update: []
+         9: 5: Updated active constraints: col(9),block(9),col(3),col(7),row(7)
+         9: 6: Board updated via constraint col(9)
+         9: 6: Locations that changed through the update: []
+         9: 6: Updated active constraints: block(9),col(3),col(7),row(7)
+         9: 7: Board updated via constraint block(9)
+         9: 7: Locations that changed through the update: []
+         9: 7: Updated active constraints: col(3),col(7),row(7)
+         9: 8: Board updated via constraint col(3)
+         9: 8: Locations that changed through the update: []
+         9: 8: Updated active constraints: col(7),row(7)
+         9: 9: Board updated via constraint col(7)
+         9: 9: Locations that changed through the update: []
+         9: 9: Updated active constraints: row(7)
+         9: 10: Board updated via constraint row(7)
+         9: 10: Locations that changed through the update: []
+         9: 10: Updated active constraints: 
+         9: Board after propagation quiescence
++----------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v4       . v2 . v9          | v5,v6,v7,v8 . v3 . v5,v7,v8       | v1,v5,v6,v7,v8    . v5,v6,v8       . v1,v5,v6,v7,v8    |
+| v7       . v8 . v3          | v4,v5,v6,v9 . v1 . v4,v5,v9       | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6       . v1 . v5          | v4,v7,v8,v9 . v2 . v4,v7,v8,v9    | v4,v7,v8          . v3             . v4,v7,v8,v9       |
++----------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v2,v8    . v5 . v1,v7,v8    | v3          . v4 . v1,v2,v7,v8,v9 | v2,v6,v7,v8       . v2,v6,v8,v9    . v2,v6,v7,v8,v9    |
+| v2,v3,v8 . v6 . v4,v7,v8    | v2,v7,v8,v9 . v5 . v2,v7,v8,v9    | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9    |
+| v2,v3,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8    . v6 . v1,v2,v7,v8    | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8    |
++----------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+| v9       . v3 . v6,v8       | v2,v4,v5    . v7 . v2,v4,v5       | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5       . v4 . v2          | v1          . v8 . v6             | v9                . v7             . v3                |
+| v1       . v7 . v6,v8       | v2,v4,v5    . v9 . v3             | v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8    |
++----------+----+-------------+-------------+----+----------------+-------------------+----------------+-------------------+
+         9: Need to 'find by trial'
+         9: Selected a pivot location (1-based:4,1) with domain [v2,v8]
+         9: Trying value v2
+          10: Active constraints at propagation start: col(1),row(4),block(4)
+          10: 0: Board updated via constraint col(1)
+          10: 0: Locations that changed through the update: [(0-based:4,0), (0-based:5,0)]
+          10: 0: Updated active constraints: row(4),block(4),row(5),row(6)
+          10: 1: Board updated via constraint row(4)
+          10: 1: Locations that changed through the update: [(0-based:3,7), (0-based:3,6), (0-based:3,5), (0-based:3,8)]
+          10: 1: Updated active constraints: block(4),row(5),row(6),col(8),block(6),col(7),col(6),block(5),col(9)
+          10: 2: Board updated via constraint block(4)
+          10: 2: Locations that changed through the update: []
+          10: 2: Updated active constraints: row(5),row(6),col(8),block(6),col(7),col(6),block(5),col(9)
+          10: 3: Board updated via constraint row(5)
+          10: 3: Locations that changed through the update: []
+          10: 3: Updated active constraints: row(6),col(8),block(6),col(7),col(6),block(5),col(9)
+          10: 4: Board updated via constraint row(6)
+          10: 4: Locations that changed through the update: []
+          10: 4: Updated active constraints: col(8),block(6),col(7),col(6),block(5),col(9)
+          10: 5: Board updated via constraint col(8)
+          10: 5: Locations that changed through the update: []
+          10: 5: Updated active constraints: block(6),col(7),col(6),block(5),col(9)
+          10: 6: Board updated via constraint block(6)
+          10: 6: Locations that changed through the update: []
+          10: 6: Updated active constraints: col(7),col(6),block(5),col(9)
+          10: 7: Board updated via constraint col(7)
+          10: 7: Locations that changed through the update: []
+          10: 7: Updated active constraints: col(6),block(5),col(9)
+          10: 8: Board updated via constraint col(6)
+          10: 8: Locations that changed through the update: []
+          10: 8: Updated active constraints: block(5),col(9)
+          10: 9: Board updated via constraint block(5)
+          10: 9: Locations that changed through the update: []
+          10: 9: Updated active constraints: col(9)
+          10: 10: Board updated via constraint col(9)
+          10: 10: Locations that changed through the update: []
+          10: 10: Updated active constraints: 
+          10: Board after propagation quiescence
++-------+----+-------------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v4    . v2 . v9          | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8    . v5,v6,v8       . v1,v5,v6,v7,v8    |
+| v7    . v8 . v3          | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6    . v1 . v5          | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8          . v3             . v4,v7,v8,v9       |
++-------+----+-------------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v2    . v5 . v1,v7,v8    | v3          . v4 . v1,v7,v8,v9 | v6,v7,v8          . v6,v8,v9       . v6,v7,v8,v9       |
+| v3,v8 . v6 . v4,v7,v8    | v2,v7,v8,v9 . v5 . v2,v7,v8,v9 | v2,v3,v4,v7,v8    . v1             . v2,v4,v7,v8,v9    |
+| v3,v8 . v9 . v1,v4,v7,v8 | v2,v7,v8    . v6 . v1,v2,v7,v8 | v2,v3,v4,v5,v7,v8 . v2,v4,v5,v8    . v2,v4,v5,v7,v8    |
++-------+----+-------------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v9    . v3 . v6,v8       | v2,v4,v5    . v7 . v2,v4,v5    | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5    . v4 . v2          | v1          . v8 . v6          | v9                . v7             . v3                |
+| v1    . v7 . v6,v8       | v2,v4,v5    . v9 . v3          | v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8    |
++-------+----+-------------+-------------+----+-------------+-------------------+----------------+-------------------+
+          10: Need to 'find by trial'
+          10: Selected a pivot location (1-based:5,1) with domain [v3,v8]
+          10: Trying value v3
+           11: Active constraints at propagation start: col(1),row(5),block(4)
+           11: 0: Board updated via constraint col(1)
+           11: 0: Locations that changed through the update: [(0-based:5,0)]
+           11: 0: Updated active constraints: row(5),block(4),row(6)
+           11: 1: Board updated via constraint row(5)
+           11: 1: Locations that changed through the update: [(0-based:4,6)]
+           11: 1: Updated active constraints: block(4),row(6),col(7),block(6)
+           11: 2: Board updated via constraint block(4)
+           11: 2: Locations that changed through the update: [(0-based:3,2), (0-based:4,2), (0-based:5,2)]
+           11: 2: Updated active constraints: row(6),col(7),block(6),col(3),row(4),row(5)
+           11: 3: Board updated via constraint row(6)
+           11: 3: Locations that changed through the update: [(0-based:5,5), (0-based:5,7), (0-based:5,6), (0-based:5,3), (0-based:5,8)]
+           11: 3: Updated active constraints: col(7),block(6),col(3),row(4),row(5),col(6),block(5),col(8),col(4),col(9)
+           11: 4: Board updated via constraint col(7)
+           11: 4: Locations that changed through the update: []
+           11: 4: Updated active constraints: block(6),col(3),row(4),row(5),col(6),block(5),col(8),col(4),col(9)
+           11: 5: Board updated via constraint block(6)
+           11: 5: Locations that changed through the update: []
+           11: 5: Updated active constraints: col(3),row(4),row(5),col(6),block(5),col(8),col(4),col(9)
+           11: 6: Board updated via constraint col(3)
+           11: 6: Locations that changed through the update: []
+           11: 6: Updated active constraints: row(4),row(5),col(6),block(5),col(8),col(4),col(9)
+           11: 7: Board updated via constraint row(4)
+           11: 7: Locations that changed through the update: []
+           11: 7: Updated active constraints: row(5),col(6),block(5),col(8),col(4),col(9)
+           11: 8: Board updated via constraint row(5)
+           11: 8: Locations that changed through the update: []
+           11: 8: Updated active constraints: col(6),block(5),col(8),col(4),col(9)
+           11: 9: Board updated via constraint col(6)
+           11: 9: Locations that changed through the update: []
+           11: 9: Updated active constraints: block(5),col(8),col(4),col(9)
+           11: 10: Board updated via constraint block(5)
+           11: 10: Locations that changed through the update: []
+           11: 10: Updated active constraints: col(8),col(4),col(9)
+           11: 11: Board updated via constraint col(8)
+           11: 11: Locations that changed through the update: []
+           11: 11: Updated active constraints: col(4),col(9)
+           11: 12: Board updated via constraint col(4)
+           11: 12: Locations that changed through the update: []
+           11: 12: Updated active constraints: col(9)
+           11: 13: Board updated via constraint col(9)
+           11: 13: Locations that changed through the update: []
+           11: 13: Updated active constraints: 
+           11: Board after propagation quiescence
++----+----+----------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v4 . v2 . v9       | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8    . v5,v6,v8       . v1,v5,v6,v7,v8    |
+| v7 . v8 . v3       | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6 . v1 . v5       | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8          . v3             . v4,v7,v8,v9       |
++----+----+----------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v2 . v5 . v1,v7    | v3          . v4 . v1,v7,v8,v9 | v6,v7,v8          . v6,v8,v9       . v6,v7,v8,v9       |
+| v3 . v6 . v4,v7    | v2,v7,v8,v9 . v5 . v2,v7,v8,v9 | v2,v4,v7,v8       . v1             . v2,v4,v7,v8,v9    |
+| v8 . v9 . v1,v4,v7 | v2,v7       . v6 . v1,v2,v7    | v3                . v2,v4,v5       . v2,v4,v5,v7       |
++----+----+----------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v9 . v3 . v6,v8    | v2,v4,v5    . v7 . v2,v4,v5    | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5 . v4 . v2       | v1          . v8 . v6          | v9                . v7             . v3                |
+| v1 . v7 . v6,v8    | v2,v4,v5    . v9 . v3          | v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8    |
++----+----+----------+-------------+----+-------------+-------------------+----------------+-------------------+
+           11: Need to 'find by trial'
+           11: Selected a pivot location (1-based:4,3) with domain [v1,v7]
+           11: Trying value v1
+            12: Active constraints at propagation start: col(3),row(4),block(4)
+            12: 0: Board updated via constraint col(3)
+            12: 0: Locations that changed through the update: [(0-based:5,2)]
+            12: 0: Updated active constraints: row(4),block(4),row(6)
+            12: 1: Board updated via constraint row(4)
+            12: 1: Locations that changed through the update: [(0-based:3,5)]
+            12: 1: Updated active constraints: block(4),row(6),col(6),block(5)
+            12: 2: Board updated via constraint block(4)
+            12: 2: Locations that changed through the update: []
+            12: 2: Updated active constraints: row(6),col(6),block(5)
+            12: 3: Board updated via constraint row(6)
+            12: 3: Locations that changed through the update: [(0-based:5,5)]
+            12: 3: Updated active constraints: col(6),block(5)
+            12: 4: Board updated via constraint col(6)
+            12: 4: Locations that changed through the update: []
+            12: 4: Updated active constraints: block(5)
+            12: 5: Board updated via constraint block(5)
+            12: 5: Locations that changed through the update: []
+            12: 5: Updated active constraints: 
+            12: Board after propagation quiescence
++----+----+-------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v4 . v2 . v9    | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8    . v5,v6,v8       . v1,v5,v6,v7,v8    |
+| v7 . v8 . v3    | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6       . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9    |
+| v6 . v1 . v5    | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8          . v3             . v4,v7,v8,v9       |
++----+----+-------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v2 . v5 . v1    | v3          . v4 . v7,v8,v9    | v6,v7,v8          . v6,v8,v9       . v6,v7,v8,v9       |
+| v3 . v6 . v4,v7 | v2,v7,v8,v9 . v5 . v2,v7,v8,v9 | v2,v4,v7,v8       . v1             . v2,v4,v7,v8,v9    |
+| v8 . v9 . v4,v7 | v2,v7       . v6 . v1          | v3                . v2,v4,v5       . v2,v4,v5,v7       |
++----+----+-------+-------------+----+-------------+-------------------+----------------+-------------------+
+| v9 . v3 . v6,v8 | v2,v4,v5    . v7 . v2,v4,v5    | v1,v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8 . v1,v2,v4,v5,v6,v8 |
+| v5 . v4 . v2    | v1          . v8 . v6          | v9                . v7             . v3                |
+| v1 . v7 . v6,v8 | v2,v4,v5    . v9 . v3          | v2,v4,v5,v6,v8    . v2,v4,v5,v6,v8 . v2,v4,v5,v6,v8    |
++----+----+-------+-------------+----+-------------+-------------------+----------------+-------------------+
+            12: Need to 'find by trial'
+            12: Selected a pivot location (1-based:7,3) with domain [v6,v8]
+            12: Trying value v6
+             13: Active constraints at propagation start: col(3),row(7),block(7)
+             13: 0: Board updated via constraint col(3)
+             13: 0: Locations that changed through the update: [(0-based:8,2)]
+             13: 0: Updated active constraints: row(7),block(7),row(9)
+             13: 1: Board updated via constraint row(7)
+             13: 1: Locations that changed through the update: [(0-based:6,6), (0-based:6,7), (0-based:6,8)]
+             13: 1: Updated active constraints: block(7),row(9),col(7),block(9),col(8),col(9)
+             13: 2: Board updated via constraint block(7)
+             13: 2: Locations that changed through the update: []
+             13: 2: Updated active constraints: row(9),col(7),block(9),col(8),col(9)
+             13: 3: Board updated via constraint row(9)
+             13: 3: Locations that changed through the update: [(0-based:8,8), (0-based:8,6), (0-based:8,7)]
+             13: 3: Updated active constraints: col(7),block(9),col(8),col(9)
+             13: 4: Board updated via constraint col(7)
+             13: 4: Locations that changed through the update: []
+             13: 4: Updated active constraints: block(9),col(8),col(9)
+             13: 5: Board updated via constraint block(9)
+             13: 5: Locations that changed through the update: []
+             13: 5: Updated active constraints: col(8),col(9)
+             13: 6: Board updated via constraint col(8)
+             13: 6: Locations that changed through the update: []
+             13: 6: Updated active constraints: col(9)
+             13: 7: Board updated via constraint col(9)
+             13: 7: Locations that changed through the update: []
+             13: 7: Updated active constraints: 
+             13: Board after propagation quiescence
++----+----+-------+-------------+----+-------------+----------------+----------------+----------------+
+| v4 . v2 . v9    | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8 . v5,v6,v8       . v1,v5,v6,v7,v8 |
+| v7 . v8 . v3    | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6    . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9 |
+| v6 . v1 . v5    | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8       . v3             . v4,v7,v8,v9    |
++----+----+-------+-------------+----+-------------+----------------+----------------+----------------+
+| v2 . v5 . v1    | v3          . v4 . v7,v8,v9    | v6,v7,v8       . v6,v8,v9       . v6,v7,v8,v9    |
+| v3 . v6 . v4,v7 | v2,v7,v8,v9 . v5 . v2,v7,v8,v9 | v2,v4,v7,v8    . v1             . v2,v4,v7,v8,v9 |
+| v8 . v9 . v4,v7 | v2,v7       . v6 . v1          | v3             . v2,v4,v5       . v2,v4,v5,v7    |
++----+----+-------+-------------+----+-------------+----------------+----------------+----------------+
+| v9 . v3 . v6    | v2,v4,v5    . v7 . v2,v4,v5    | v1,v2,v4,v5,v8 . v2,v4,v5,v8    . v1,v2,v4,v5,v8 |
+| v5 . v4 . v2    | v1          . v8 . v6          | v9             . v7             . v3             |
+| v1 . v7 . v8    | v2,v4,v5    . v9 . v3          | v2,v4,v5,v6    . v2,v4,v5,v6    . v2,v4,v5,v6    |
++----+----+-------+-------------+----+-------------+----------------+----------------+----------------+
+             13: Need to 'find by trial'
+             13: Selected a pivot location (1-based:5,3) with domain [v4,v7]
+             13: Trying value v4
+              14: Active constraints at propagation start: col(3),row(5),block(4)
+              14: 0: Board updated via constraint col(3)
+              14: 0: Locations that changed through the update: [(0-based:5,2)]
+              14: 0: Updated active constraints: row(5),block(4),row(6)
+              14: 1: Board updated via constraint row(5)
+              14: 1: Locations that changed through the update: [(0-based:4,6), (0-based:4,8)]
+              14: 1: Updated active constraints: block(4),row(6),col(7),block(6),col(9)
+              14: 2: Board updated via constraint block(4)
+              14: 2: Locations that changed through the update: []
+              14: 2: Updated active constraints: row(6),col(7),block(6),col(9)
+              14: 3: Board updated via constraint row(6)
+              14: 3: Locations that changed through the update: [(0-based:5,7), (0-based:5,3), (0-based:5,8)]
+              14: 3: Updated active constraints: col(7),block(6),col(9),col(8),col(4),block(5)
+              14: 4: Board updated via constraint col(7)
+              14: 4: Locations that changed through the update: []
+              14: 4: Updated active constraints: block(6),col(9),col(8),col(4),block(5)
+              14: 5: Board updated via constraint block(6)
+              14: 5: Locations that changed through the update: []
+              14: 5: Updated active constraints: col(9),col(8),col(4),block(5)
+              14: 6: Board updated via constraint col(9)
+              14: 6: Locations that changed through the update: []
+              14: 6: Updated active constraints: col(8),col(4),block(5)
+              14: 7: Board updated via constraint col(8)
+              14: 7: Locations that changed through the update: []
+              14: 7: Updated active constraints: col(4),block(5)
+              14: 8: Board updated via constraint col(4)
+              14: 8: Locations that changed through the update: [(0-based:6,3), (0-based:4,3), (0-based:8,3)]
+              14: 8: Updated active constraints: block(5),row(7),block(8),row(5),row(9)
+              14: 9: Board updated via constraint block(5)
+              14: 9: Locations that changed through the update: [(0-based:4,5)]
+              14: 9: Updated active constraints: row(7),block(8),row(5),row(9),col(6)
+              14: 10: Board updated via constraint row(7)
+              14: 10: Locations that changed through the update: []
+              14: 10: Updated active constraints: block(8),row(5),row(9),col(6)
+              14: 11: Board updated via constraint block(8)
+              14: 11: Locations that changed through the update: [(0-based:6,5)]
+              14: 11: Updated active constraints: row(5),row(9),col(6),row(7)
+              14: 12: Board updated via constraint row(5)
+              14: 12: Locations that changed through the update: []
+              14: 12: Updated active constraints: row(9),col(6),row(7)
+              14: 13: Board updated via constraint row(9)
+              14: 13: Locations that changed through the update: []
+              14: 13: Updated active constraints: col(6),row(7)
+              14: 14: Board updated via constraint col(6)
+              14: 14: Locations that changed through the update: []
+              14: 14: Updated active constraints: row(7)
+              14: 15: Board updated via constraint row(7)
+              14: 15: Locations that changed through the update: [(0-based:6,6), (0-based:6,7), (0-based:6,8)]
+              14: 15: Updated active constraints: col(7),block(9),col(8),col(9)
+              14: 16: Board updated via constraint col(7)
+              14: 16: Locations that changed through the update: []
+              14: 16: Updated active constraints: block(9),col(8),col(9)
+              14: 17: Board updated via constraint block(9)
+              14: 17: Locations that changed through the update: []
+              14: 17: Updated active constraints: col(8),col(9)
+              14: 18: Board updated via constraint col(8)
+              14: 18: Locations that changed through the update: []
+              14: 18: Updated active constraints: col(9)
+              14: 19: Board updated via constraint col(9)
+              14: 19: Locations that changed through the update: []
+              14: 19: Updated active constraints: 
+              14: Board after propagation quiescence
++----+----+----+-------------+----+-------------+----------------+----------------+----------------+
+| v4 . v2 . v9 | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8 . v5,v6,v8       . v1,v5,v6,v7,v8 |
+| v7 . v8 . v3 | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6    . v2,v4,v5,v6,v9 . v2,v4,v5,v6,v9 |
+| v6 . v1 . v5 | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8       . v3             . v4,v7,v8,v9    |
++----+----+----+-------------+----+-------------+----------------+----------------+----------------+
+| v2 . v5 . v1 | v3          . v4 . v7,v8,v9    | v6,v7,v8       . v6,v8,v9       . v6,v7,v8,v9    |
+| v3 . v6 . v4 | v7,v8,v9    . v5 . v7,v8,v9    | v2,v7,v8       . v1             . v2,v7,v8,v9    |
+| v8 . v9 . v7 | v2          . v6 . v1          | v3             . v4,v5          . v4,v5          |
++----+----+----+-------------+----+-------------+----------------+----------------+----------------+
+| v9 . v3 . v6 | v4,v5       . v7 . v2          | v1,v4,v5,v8    . v4,v5,v8       . v1,v4,v5,v8    |
+| v5 . v4 . v2 | v1          . v8 . v6          | v9             . v7             . v3             |
+| v1 . v7 . v8 | v4,v5       . v9 . v3          | v2,v4,v5,v6    . v2,v4,v5,v6    . v2,v4,v5,v6    |
++----+----+----+-------------+----+-------------+----------------+----------------+----------------+
+              14: Need to 'find by trial'
+              14: Selected a pivot location (1-based:6,8) with domain [v4,v5]
+              14: Trying value v4
+               15: Active constraints at propagation start: col(8),row(6),block(6)
+               15: 0: Board updated via constraint col(8)
+               15: 0: Locations that changed through the update: [(0-based:6,7), (0-based:1,7), (0-based:8,7)]
+               15: 0: Updated active constraints: row(6),block(6),row(7),block(9),row(2),block(3),row(9)
+               15: 1: Board updated via constraint row(6)
+               15: 1: Locations that changed through the update: [(0-based:5,8)]
+               15: 1: Updated active constraints: block(6),row(7),block(9),row(2),block(3),row(9),col(9)
+               15: 2: Board updated via constraint block(6)
+               15: 2: Locations that changed through the update: []
+               15: 2: Updated active constraints: row(7),block(9),row(2),block(3),row(9),col(9)
+               15: 3: Board updated via constraint row(7)
+               15: 3: Locations that changed through the update: []
+               15: 3: Updated active constraints: block(9),row(2),block(3),row(9),col(9)
+               15: 4: Board updated via constraint block(9)
+               15: 4: Locations that changed through the update: []
+               15: 4: Updated active constraints: row(2),block(3),row(9),col(9)
+               15: 5: Board updated via constraint row(2)
+               15: 5: Locations that changed through the update: []
+               15: 5: Updated active constraints: block(3),row(9),col(9)
+               15: 6: Board updated via constraint block(3)
+               15: 6: Locations that changed through the update: []
+               15: 6: Updated active constraints: row(9),col(9)
+               15: 7: Board updated via constraint row(9)
+               15: 7: Locations that changed through the update: []
+               15: 7: Updated active constraints: col(9)
+               15: 8: Board updated via constraint col(9)
+               15: 8: Locations that changed through the update: [(0-based:8,8), (0-based:0,8), (0-based:1,8), (0-based:6,8)]
+               15: 8: Updated active constraints: row(9),block(9),row(1),block(3),row(2),row(7)
+               15: 9: Board updated via constraint row(9)
+               15: 9: Locations that changed through the update: []
+               15: 9: Updated active constraints: block(9),row(1),block(3),row(2),row(7)
+               15: 10: Board updated via constraint block(9)
+               15: 10: Locations that changed through the update: []
+               15: 10: Updated active constraints: row(1),block(3),row(2),row(7)
+               15: 11: Board updated via constraint row(1)
+               15: 11: Locations that changed through the update: []
+               15: 11: Updated active constraints: block(3),row(2),row(7)
+               15: 12: Board updated via constraint block(3)
+               15: 12: Locations that changed through the update: []
+               15: 12: Updated active constraints: row(2),row(7)
+               15: 13: Board updated via constraint row(2)
+               15: 13: Locations that changed through the update: []
+               15: 13: Updated active constraints: row(7)
+               15: 14: Board updated via constraint row(7)
+               15: 14: Locations that changed through the update: []
+               15: 14: Updated active constraints: 
+               15: Board after propagation quiescence
++----+----+----+-------------+----+-------------+----------------+-------------+-------------+
+| v4 . v2 . v9 | v5,v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8 . v5,v6,v8    . v1,v6,v7,v8 |
+| v7 . v8 . v3 | v4,v5,v6,v9 . v1 . v4,v5,v9    | v2,v4,v5,v6    . v2,v5,v6,v9 . v2,v4,v6,v9 |
+| v6 . v1 . v5 | v4,v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8       . v3          . v4,v7,v8,v9 |
++----+----+----+-------------+----+-------------+----------------+-------------+-------------+
+| v2 . v5 . v1 | v3          . v4 . v7,v8,v9    | v6,v7,v8       . v6,v8,v9    . v6,v7,v8,v9 |
+| v3 . v6 . v4 | v7,v8,v9    . v5 . v7,v8,v9    | v2,v7,v8       . v1          . v2,v7,v8,v9 |
+| v8 . v9 . v7 | v2          . v6 . v1          | v3             . v4          . v5          |
++----+----+----+-------------+----+-------------+----------------+-------------+-------------+
+| v9 . v3 . v6 | v4,v5       . v7 . v2          | v1,v4,v5,v8    . v5,v8       . v1,v4,v8    |
+| v5 . v4 . v2 | v1          . v8 . v6          | v9             . v7          . v3          |
+| v1 . v7 . v8 | v4,v5       . v9 . v3          | v2,v4,v5,v6    . v2,v5,v6    . v2,v4,v6    |
++----+----+----+-------------+----+-------------+----------------+-------------+-------------+
+               15: Need to 'find by trial'
+               15: Selected a pivot location (1-based:7,8) with domain [v5,v8]
+               15: Trying value v5
+                16: Active constraints at propagation start: col(8),row(7),block(9)
+                16: 0: Board updated via constraint col(8)
+                16: 0: Locations that changed through the update: [(0-based:1,7), (0-based:0,7), (0-based:8,7)]
+                16: 0: Updated active constraints: row(7),block(9),row(2),block(3),row(1),row(9)
+                16: 1: Board updated via constraint row(7)
+                16: 1: Locations that changed through the update: [(0-based:6,6), (0-based:6,3), (0-based:6,8)]
+                16: 1: Updated active constraints: block(9),row(2),block(3),row(1),row(9),col(7),col(4),block(8),col(9)
+                16: 2: Board updated via constraint block(9)
+                16: 2: Locations that changed through the update: [(0-based:8,6)]
+                16: 2: Updated active constraints: row(2),block(3),row(1),row(9),col(7),col(4),block(8),col(9)
+                16: 3: Board updated via constraint row(2)
+                16: 3: Locations that changed through the update: []
+                16: 3: Updated active constraints: block(3),row(1),row(9),col(7),col(4),block(8),col(9)
+                16: 4: Board updated via constraint block(3)
+                16: 4: Locations that changed through the update: []
+                16: 4: Updated active constraints: row(1),row(9),col(7),col(4),block(8),col(9)
+                16: 5: Board updated via constraint row(1)
+                16: 5: Locations that changed through the update: []
+                16: 5: Updated active constraints: row(9),col(7),col(4),block(8),col(9)
+                16: 6: Board updated via constraint row(9)
+                16: 6: Locations that changed through the update: [(0-based:8,3)]
+                16: 6: Updated active constraints: col(7),col(4),block(8),col(9)
+                16: 7: Board updated via constraint col(7)
+                16: 7: Locations that changed through the update: []
+                16: 7: Updated active constraints: col(4),block(8),col(9)
+                16: 8: Board updated via constraint col(4)
+                16: 8: Locations that changed through the update: [(0-based:2,3), (0-based:1,3), (0-based:0,3)]
+                16: 8: Updated active constraints: block(8),col(9),row(3),block(2),row(2),row(1)
+                16: 9: Board updated via constraint block(8)
+                16: 9: Locations that changed through the update: []
+                16: 9: Updated active constraints: col(9),row(3),block(2),row(2),row(1)
+                16: 10: Board updated via constraint col(9)
+                16: 10: Locations that changed through the update: []
+                16: 10: Updated active constraints: row(3),block(2),row(2),row(1)
+                16: 11: Board updated via constraint row(3)
+                16: 11: Locations that changed through the update: []
+                16: 11: Updated active constraints: block(2),row(2),row(1)
+                16: 12: Board updated via constraint block(2)
+                16: 12: Locations that changed through the update: []
+                16: 12: Updated active constraints: row(2),row(1)
+                16: 13: Board updated via constraint row(2)
+                16: 13: Locations that changed through the update: []
+                16: 13: Updated active constraints: row(1)
+                16: 14: Board updated via constraint row(1)
+                16: 14: Locations that changed through the update: []
+                16: 14: Updated active constraints: 
+                16: Board after propagation quiescence
++----+----+----+----------+----+-------------+----------------+----------+-------------+
+| v4 . v2 . v9 | v6,v7,v8 . v3 . v5,v7,v8    | v1,v5,v6,v7,v8 . v6,v8    . v1,v6,v7,v8 |
+| v7 . v8 . v3 | v6,v9    . v1 . v4,v5,v9    | v2,v4,v5,v6    . v2,v6,v9 . v2,v4,v6,v9 |
+| v6 . v1 . v5 | v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8       . v3       . v4,v7,v8,v9 |
++----+----+----+----------+----+-------------+----------------+----------+-------------+
+| v2 . v5 . v1 | v3       . v4 . v7,v8,v9    | v6,v7,v8       . v6,v8,v9 . v6,v7,v8,v9 |
+| v3 . v6 . v4 | v7,v8,v9 . v5 . v7,v8,v9    | v2,v7,v8       . v1       . v2,v7,v8,v9 |
+| v8 . v9 . v7 | v2       . v6 . v1          | v3             . v4       . v5          |
++----+----+----+----------+----+-------------+----------------+----------+-------------+
+| v9 . v3 . v6 | v4       . v7 . v2          | v1,v8          . v5       . v1,v8       |
+| v5 . v4 . v2 | v1       . v8 . v6          | v9             . v7       . v3          |
+| v1 . v7 . v8 | v5       . v9 . v3          | v2,v4,v6       . v2,v6    . v2,v4,v6    |
++----+----+----+----------+----+-------------+----------------+----------+-------------+
+                16: Need to 'find by trial'
+                16: Selected a pivot location (1-based:7,7) with domain [v1,v8]
+                16: Trying value v1
+                 17: Active constraints at propagation start: col(7),row(7),block(9)
+                 17: 0: Board updated via constraint col(7)
+                 17: 0: Locations that changed through the update: [(0-based:0,6)]
+                 17: 0: Updated active constraints: row(7),block(9),row(1),block(3)
+                 17: 1: Board updated via constraint row(7)
+                 17: 1: Locations that changed through the update: [(0-based:6,8)]
+                 17: 1: Updated active constraints: block(9),row(1),block(3),col(9)
+                 17: 2: Board updated via constraint block(9)
+                 17: 2: Locations that changed through the update: []
+                 17: 2: Updated active constraints: row(1),block(3),col(9)
+                 17: 3: Board updated via constraint row(1)
+                 17: 3: Locations that changed through the update: [(0-based:0,8)]
+                 17: 3: Updated active constraints: block(3),col(9)
+                 17: 4: Board updated via constraint block(3)
+                 17: 4: Locations that changed through the update: []
+                 17: 4: Updated active constraints: col(9)
+                 17: 5: Board updated via constraint col(9)
+                 17: 5: Locations that changed through the update: [(0-based:2,8), (0-based:3,8), (0-based:4,8)]
+                 17: 5: Updated active constraints: row(3),block(3),row(4),block(6),row(5)
+                 17: 6: Board updated via constraint row(3)
+                 17: 6: Locations that changed through the update: []
+                 17: 6: Updated active constraints: block(3),row(4),block(6),row(5)
+                 17: 7: Board updated via constraint block(3)
+                 17: 7: Locations that changed through the update: []
+                 17: 7: Updated active constraints: row(4),block(6),row(5)
+                 17: 8: Board updated via constraint row(4)
+                 17: 8: Locations that changed through the update: []
+                 17: 8: Updated active constraints: block(6),row(5)
+                 17: 9: Board updated via constraint block(6)
+                 17: 9: Locations that changed through the update: []
+                 17: 9: Updated active constraints: row(5)
+                 17: 10: Board updated via constraint row(5)
+                 17: 10: Locations that changed through the update: []
+                 17: 10: Updated active constraints: 
+                 17: Board after propagation quiescence
++----+----+----+----------+----+-------------+-------------+----------+-------------+
+| v4 . v2 . v9 | v6,v7,v8 . v3 . v5,v7,v8    | v5,v6,v7,v8 . v6,v8    . v1          |
+| v7 . v8 . v3 | v6,v9    . v1 . v4,v5,v9    | v2,v4,v5,v6 . v2,v6,v9 . v2,v4,v6,v9 |
+| v6 . v1 . v5 | v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8    . v3       . v4,v7,v9    |
++----+----+----+----------+----+-------------+-------------+----------+-------------+
+| v2 . v5 . v1 | v3       . v4 . v7,v8,v9    | v6,v7,v8    . v6,v8,v9 . v6,v7,v9    |
+| v3 . v6 . v4 | v7,v8,v9 . v5 . v7,v8,v9    | v2,v7,v8    . v1       . v2,v7,v9    |
+| v8 . v9 . v7 | v2       . v6 . v1          | v3          . v4       . v5          |
++----+----+----+----------+----+-------------+-------------+----------+-------------+
+| v9 . v3 . v6 | v4       . v7 . v2          | v1          . v5       . v8          |
+| v5 . v4 . v2 | v1       . v8 . v6          | v9          . v7       . v3          |
+| v1 . v7 . v8 | v5       . v9 . v3          | v2,v4,v6    . v2,v6    . v2,v4,v6    |
++----+----+----+----------+----+-------------+-------------+----------+-------------+
+                 17: Need to 'find by trial'
+                 17: Selected a pivot location (1-based:2,4) with domain [v6,v9]
+                 17: Trying value v6
+                  18: Active constraints at propagation start: col(4),row(2),block(2)
+                  18: 0: Board updated via constraint col(4)
+                  18: 0: Locations that changed through the update: [(0-based:0,3)]
+                  18: 0: Updated active constraints: row(2),block(2),row(1)
+                  18: 1: Board updated via constraint row(2)
+                  18: 1: Locations that changed through the update: [(0-based:1,7), (0-based:1,6), (0-based:1,8)]
+                  18: 1: Updated active constraints: block(2),row(1),col(8),block(3),col(7),col(9)
+                  18: 2: Board updated via constraint block(2)
+                  18: 2: Locations that changed through the update: []
+                  18: 2: Updated active constraints: row(1),col(8),block(3),col(7),col(9)
+                  18: 3: Board updated via constraint row(1)
+                  18: 3: Locations that changed through the update: []
+                  18: 3: Updated active constraints: col(8),block(3),col(7),col(9)
+                  18: 4: Board updated via constraint col(8)
+                  18: 4: Locations that changed through the update: []
+                  18: 4: Updated active constraints: block(3),col(7),col(9)
+                  18: 5: Board updated via constraint block(3)
+                  18: 5: Locations that changed through the update: []
+                  18: 5: Updated active constraints: col(7),col(9)
+                  18: 6: Board updated via constraint col(7)
+                  18: 6: Locations that changed through the update: []
+                  18: 6: Updated active constraints: col(9)
+                  18: 7: Board updated via constraint col(9)
+                  18: 7: Locations that changed through the update: []
+                  18: 7: Updated active constraints: 
+                  18: Board after propagation quiescence
++----+----+----+----------+----+-------------+-------------+----------+----------+
+| v4 . v2 . v9 | v7,v8    . v3 . v5,v7,v8    | v5,v6,v7,v8 . v6,v8    . v1       |
+| v7 . v8 . v3 | v6       . v1 . v4,v5,v9    | v2,v4,v5    . v2,v9    . v2,v4,v9 |
+| v6 . v1 . v5 | v7,v8,v9 . v2 . v4,v7,v8,v9 | v4,v7,v8    . v3       . v4,v7,v9 |
++----+----+----+----------+----+-------------+-------------+----------+----------+
+| v2 . v5 . v1 | v3       . v4 . v7,v8,v9    | v6,v7,v8    . v6,v8,v9 . v6,v7,v9 |
+| v3 . v6 . v4 | v7,v8,v9 . v5 . v7,v8,v9    | v2,v7,v8    . v1       . v2,v7,v9 |
+| v8 . v9 . v7 | v2       . v6 . v1          | v3          . v4       . v5       |
++----+----+----+----------+----+-------------+-------------+----------+----------+
+| v9 . v3 . v6 | v4       . v7 . v2          | v1          . v5       . v8       |
+| v5 . v4 . v2 | v1       . v8 . v6          | v9          . v7       . v3       |
+| v1 . v7 . v8 | v5       . v9 . v3          | v2,v4,v6    . v2,v6    . v2,v4,v6 |
++----+----+----+----------+----+-------------+-------------+----------+----------+
+                  18: Need to 'find by trial'
+                  18: Selected a pivot location (1-based:1,4) with domain [v7,v8]
+                  18: Trying value v7
+                   19: Active constraints at propagation start: col(4),row(1),block(2)
+                   19: 0: Board updated via constraint col(4)
+                   19: 0: Locations that changed through the update: [(0-based:2,3), (0-based:4,3)]
+                   19: 0: Updated active constraints: row(1),block(2),row(3),row(5),block(5)
+                   19: 1: Board updated via constraint row(1)
+                   19: 1: Locations that changed through the update: [(0-based:0,5), (0-based:0,6)]
+                   19: 1: Updated active constraints: block(2),row(3),row(5),block(5),col(6),col(7),block(3)
+                   19: 2: Board updated via constraint block(2)
+                   19: 2: Locations that changed through the update: [(0-based:2,5)]
+                   19: 2: Updated active constraints: row(3),row(5),block(5),col(6),col(7),block(3)
+                   19: 3: Board updated via constraint row(3)
+                   19: 3: Locations that changed through the update: []
+                   19: 3: Updated active constraints: row(5),block(5),col(6),col(7),block(3)
+                   19: 4: Board updated via constraint row(5)
+                   19: 4: Locations that changed through the update: []
+                   19: 4: Updated active constraints: block(5),col(6),col(7),block(3)
+                   19: 5: Board updated via constraint block(5)
+                   19: 5: Locations that changed through the update: []
+                   19: 5: Updated active constraints: col(6),col(7),block(3)
+                   19: 6: Board updated via constraint col(6)
+                   19: 6: Locations that changed through the update: []
+                   19: 6: Updated active constraints: col(7),block(3)
+                   19: 7: Board updated via constraint col(7)
+                   19: 7: Locations that changed through the update: []
+                   19: 7: Updated active constraints: block(3)
+                   19: 8: Board updated via constraint block(3)
+                   19: 8: Locations that changed through the update: []
+                   19: 8: Updated active constraints: 
+                   19: Board after propagation quiescence
++----+----+----+-------+----+----------+----------+----------+----------+
+| v4 . v2 . v9 | v7    . v3 . v5,v8    | v5,v6,v8 . v6,v8    . v1       |
+| v7 . v8 . v3 | v6    . v1 . v4,v5,v9 | v2,v4,v5 . v2,v9    . v2,v4,v9 |
+| v6 . v1 . v5 | v8,v9 . v2 . v4,v8,v9 | v4,v7,v8 . v3       . v4,v7,v9 |
++----+----+----+-------+----+----------+----------+----------+----------+
+| v2 . v5 . v1 | v3    . v4 . v7,v8,v9 | v6,v7,v8 . v6,v8,v9 . v6,v7,v9 |
+| v3 . v6 . v4 | v8,v9 . v5 . v7,v8,v9 | v2,v7,v8 . v1       . v2,v7,v9 |
+| v8 . v9 . v7 | v2    . v6 . v1       | v3       . v4       . v5       |
++----+----+----+-------+----+----------+----------+----------+----------+
+| v9 . v3 . v6 | v4    . v7 . v2       | v1       . v5       . v8       |
+| v5 . v4 . v2 | v1    . v8 . v6       | v9       . v7       . v3       |
+| v1 . v7 . v8 | v5    . v9 . v3       | v2,v4,v6 . v2,v6    . v2,v4,v6 |
++----+----+----+-------+----+----------+----------+----------+----------+
+                   19: Need to 'find by trial'
+                   19: Selected a pivot location (1-based:3,4) with domain [v8,v9]
+                   19: Trying value v8
+                    20: Active constraints at propagation start: col(4),row(3),block(2)
+                    20: 0: Board updated via constraint col(4)
+                    20: 0: Locations that changed through the update: [(0-based:4,3)]
+                    20: 0: Updated active constraints: row(3),block(2),row(5),block(5)
+                    20: 1: Board updated via constraint row(3)
+                    20: 1: Locations that changed through the update: [(0-based:2,6), (0-based:2,5)]
+                    20: 1: Updated active constraints: block(2),row(5),block(5),col(7),block(3),col(6)
+                    20: 2: Board updated via constraint block(2)
+                    20: 2: Locations that changed through the update: [(0-based:1,5), (0-based:0,5)]
+                    20: 2: Updated active constraints: row(5),block(5),col(7),block(3),col(6),row(2),row(1)
+                    20: 3: Board updated via constraint row(5)
+                    20: 3: Locations that changed through the update: [(0-based:4,5), (0-based:4,8)]
+                    20: 3: Updated active constraints: block(5),col(7),block(3),col(6),row(2),row(1),col(9),block(6)
+                    20: 4: Board updated via constraint block(5)
+                    20: 4: Locations that changed through the update: [(0-based:3,5)]
+                    20: 4: Updated active constraints: col(7),block(3),col(6),row(2),row(1),col(9),block(6),row(4)
+                    20: 5: Board updated via constraint col(7)
+                    20: 5: Locations that changed through the update: []
+                    20: 5: Updated active constraints: block(3),col(6),row(2),row(1),col(9),block(6),row(4)
+                    20: 6: Board updated via constraint block(3)
+                    20: 6: Locations that changed through the update: []
+                    20: 6: Updated active constraints: col(6),row(2),row(1),col(9),block(6),row(4)
+                    20: 7: Board updated via constraint col(6)
+                    20: 7: Locations that changed through the update: []
+                    20: 7: Updated active constraints: row(2),row(1),col(9),block(6),row(4)
+                    20: 8: Board updated via constraint row(2)
+                    20: 8: Locations that changed through the update: [(0-based:1,6)]
+                    20: 8: Updated active constraints: row(1),col(9),block(6),row(4),col(7),block(3)
+                    20: 9: Board updated via constraint row(1)
+                    20: 9: Locations that changed through the update: [(0-based:0,6)]
+                    20: 9: Updated active constraints: col(9),block(6),row(4),col(7),block(3)
+                    20: 10: Board updated via constraint col(9)
+                    20: 10: Locations that changed through the update: []
+                    20: 10: Updated active constraints: block(6),row(4),col(7),block(3)
+                    20: 11: Board updated via constraint block(6)
+                    20: 11: Locations that changed through the update: []
+                    20: 11: Updated active constraints: row(4),col(7),block(3)
+                    20: 12: Board updated via constraint row(4)
+                    20: 12: Locations that changed through the update: []
+                    20: 12: Updated active constraints: col(7),block(3)
+                    20: 13: Board updated via constraint col(7)
+                    20: 13: Locations that changed through the update: []
+                    20: 13: Updated active constraints: block(3)
+                    20: 14: Board updated via constraint block(3)
+                    20: 14: Locations that changed through the update: []
+                    20: 14: Updated active constraints: 
+                    20: Board after propagation quiescence
++----+----+----+----+----+-------+----------+----------+----------+
+| v4 . v2 . v9 | v7 . v3 . v5    | v6,v8    . v6,v8    . v1       |
+| v7 . v8 . v3 | v6 . v1 . v4,v9 | v5       . v2,v9    . v2,v4,v9 |
+| v6 . v1 . v5 | v8 . v2 . v4,v9 | v4,v7    . v3       . v4,v7,v9 |
++----+----+----+----+----+-------+----------+----------+----------+
+| v2 . v5 . v1 | v3 . v4 . v7,v8 | v6,v7,v8 . v6,v8,v9 . v6,v7,v9 |
+| v3 . v6 . v4 | v9 . v5 . v7,v8 | v2,v7,v8 . v1       . v2,v7    |
+| v8 . v9 . v7 | v2 . v6 . v1    | v3       . v4       . v5       |
++----+----+----+----+----+-------+----------+----------+----------+
+| v9 . v3 . v6 | v4 . v7 . v2    | v1       . v5       . v8       |
+| v5 . v4 . v2 | v1 . v8 . v6    | v9       . v7       . v3       |
+| v1 . v7 . v8 | v5 . v9 . v3    | v2,v4,v6 . v2,v6    . v2,v4,v6 |
++----+----+----+----+----+-------+----------+----------+----------+
+                    20: Need to 'find by trial'
+                    20: Selected a pivot location (1-based:5,6) with domain [v7,v8]
+                    20: Trying value v7
+                     21: Active constraints at propagation start: col(6),row(5),block(5)
+                     21: 0: Board updated via constraint col(6)
+                     21: 0: Locations that changed through the update: [(0-based:3,5)]
+                     21: 0: Updated active constraints: row(5),block(5),row(4)
+                     21: 1: Board updated via constraint row(5)
+                     21: 1: Locations that changed through the update: [(0-based:4,6), (0-based:4,8)]
+                     21: 1: Updated active constraints: block(5),row(4),col(7),block(6),col(9)
+                     21: 2: Board updated via constraint block(5)
+                     21: 2: Locations that changed through the update: []
+                     21: 2: Updated active constraints: row(4),col(7),block(6),col(9)
+                     21: 3: Board updated via constraint row(4)
+                     21: 3: Locations that changed through the update: [(0-based:3,7), (0-based:3,6)]
+                     21: 3: Updated active constraints: col(7),block(6),col(9),col(8)
+                     21: 4: Board updated via constraint col(7)
+                     21: 4: Locations that changed through the update: [(0-based:2,6), (0-based:3,6), (0-based:0,6), (0-based:8,6)]
+                     21: 4: Updated active constraints: block(6),col(9),col(8),row(3),block(3),row(4),row(1),row(9),block(9)
+                     21: 5: Board updated via constraint block(6)
+                     21: 5: Locations that changed through the update: [(0-based:3,8)]
+                     21: 5: Updated active constraints: col(9),col(8),row(3),block(3),row(4),row(1),row(9),block(9)
+                     21: 6: Board updated via constraint col(9)
+                     21: 6: Locations that changed through the update: [(0-based:8,8), (0-based:1,8), (0-based:2,8)]
+                     21: 6: Updated active constraints: col(8),row(3),block(3),row(4),row(1),row(9),block(9),row(2)
+                     21: 7: Board updated via constraint col(8)
+                     21: 7: Locations that changed through the update: [(0-based:0,7)]
+                     21: 7: Updated active constraints: row(3),block(3),row(4),row(1),row(9),block(9),row(2)
+                     21: 8: Board updated via constraint row(3)
+                     21: 8: Locations that changed through the update: [(0-based:2,5)]
+                     21: 8: Updated active constraints: block(3),row(4),row(1),row(9),block(9),row(2),col(6),block(2)
+                     21: 9: Board updated via constraint block(3)
+                     21: 9: Locations that changed through the update: [(0-based:1,7), (0-based:1,8)]
+                     21: 9: Updated active constraints: row(4),row(1),row(9),block(9),row(2),col(6),block(2),col(8),col(9)
+                     21: 10: Board updated via constraint row(4)
+                     21: 10: Locations that changed through the update: []
+                     21: 10: Updated active constraints: row(1),row(9),block(9),row(2),col(6),block(2),col(8),col(9)
+                     21: 11: Board updated via constraint row(1)
+                     21: 11: Locations that changed through the update: []
+                     21: 11: Updated active constraints: row(9),block(9),row(2),col(6),block(2),col(8),col(9)
+                     21: 12: Board updated via constraint row(9)
+                     21: 12: Locations that changed through the update: [(0-based:8,8), (0-based:8,7)]
+                     21: 12: Updated active constraints: block(9),row(2),col(6),block(2),col(8),col(9)
+                     21: 13: Board updated via constraint block(9)
+                     21: 13: Locations that changed through the update: []
+                     21: 13: Updated active constraints: row(2),col(6),block(2),col(8),col(9)
+                     21: 14: Board updated via constraint row(2)
+                     21: 14: Locations that changed through the update: [(0-based:1,5)]
+                     21: 14: Updated active constraints: col(6),block(2),col(8),col(9)
+                     21: 15: Board updated via constraint col(6)
+                     21: 15: Locations that changed through the update: []
+                     21: 15: Updated active constraints: block(2),col(8),col(9)
+                     21: 16: Board updated via constraint block(2)
+                     21: 16: Locations that changed through the update: []
+                     21: 16: Updated active constraints: col(8),col(9)
+                     21: 17: Board updated via constraint col(8)
+                     21: 17: Locations that changed through the update: [(0-based:3,7)]
+                     21: 17: Updated active constraints: col(9),row(4),block(6)
+                     21: 18: Board updated via constraint col(9)
+                     21: 18: Locations that changed through the update: [(0-based:3,8)]
+                     21: 18: Updated active constraints: row(4),block(6)
+                     21: 19: Board updated via constraint row(4)
+                     21: 19: Locations that changed through the update: []
+                     21: 19: Updated active constraints: block(6)
+                     21: 20: Board updated via constraint block(6)
+                     21: 20: Locations that changed through the update: []
+                     21: 20: Updated active constraints: 
+                     21: Board after propagation quiescence
++----+----+----+----+----+----+----+----+----+
+| v4 . v2 . v9 | v7 . v3 . v5 | v6 . v8 . v1 |
+| v7 . v8 . v3 | v6 . v1 . v4 | v5 . v2 . v9 |
+| v6 . v1 . v5 | v8 . v2 . v9 | v4 . v3 . v7 |
++----+----+----+----+----+----+----+----+----+
+| v2 . v5 . v1 | v3 . v4 . v8 | v7 . v9 . v6 |
+| v3 . v6 . v4 | v9 . v5 . v7 | v8 . v1 . v2 |
+| v8 . v9 . v7 | v2 . v6 . v1 | v3 . v4 . v5 |
++----+----+----+----+----+----+----+----+----+
+| v9 . v3 . v6 | v4 . v7 . v2 | v1 . v5 . v8 |
+| v5 . v4 . v2 | v1 . v8 . v6 | v9 . v7 . v3 |
+| v1 . v7 . v8 | v5 . v9 . v3 | v2 . v6 . v4 |
++----+----+----+----+----+----+----+----+----+
+Found a solution!
+=================
++----+----+----+----+----+----+----+----+----+
+| v4 . v2 . v9 | v7 . v3 . v5 | v6 . v8 . v1 |
+| v7 . v8 . v3 | v6 . v1 . v4 | v5 . v2 . v9 |
+| v6 . v1 . v5 | v8 . v2 . v9 | v4 . v3 . v7 |
++----+----+----+----+----+----+----+----+----+
+| v2 . v5 . v1 | v3 . v4 . v8 | v7 . v9 . v6 |
+| v3 . v6 . v4 | v9 . v5 . v7 | v8 . v1 . v2 |
+| v8 . v9 . v7 | v2 . v6 . v1 | v3 . v4 . v5 |
++----+----+----+----+----+----+----+----+----+
+| v9 . v3 . v6 | v4 . v7 . v2 | v1 . v5 . v8 |
+| v5 . v4 . v2 | v1 . v8 . v6 | v9 . v7 . v3 |
+| v1 . v7 . v8 | v5 . v9 . v3 | v2 . v6 . v4 |
++----+----+----+----+----+----+----+----+----+
+
