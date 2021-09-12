@@ -19,8 +19,8 @@ With languages that provide the right abstraction you can go right for it in a f
 ### Prolog
 
    * [Solving Sudoku with (Scryer) Prolog](https://www.metalevel.at/sudoku/) by Markus Triska
-   * [In SWI-Prolog](https://www.swi-prolog.org/pldoc/man?section=clpfd-sudoku) using [library(clpfd)](https://www.swi-prolog.org/pldoc/man?section=clpfd) (also by Markus Triska I guess)
-   * [](https://www.youtube.com/watch?v=5KUdEZTu06o) 
+   * [In SWI-Prolog](https://www.swi-prolog.org/pldoc/man?section=clpfd-sudoku) using [library(clpfd)](https://www.swi-prolog.org/pldoc/man?section=clpfd) (also originally by Markus Triska I guess)
+   * [YouTube: "Sudoku in Prolog"](https://www.youtube.com/watch?v=5KUdEZTu06o) by Markus Triska 
 
 ### MiniZinc
    
