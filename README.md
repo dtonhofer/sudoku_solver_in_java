@@ -31,10 +31,13 @@ With languages that provide the right abstraction you can go right for it in a f
 
 ## Some reading
 
-   * [Sudoku as a Constraint Problem](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.88.2964) by Helmut Simonis
+   * [Sudoku](https://en.wikipedia.org/wiki/Sudoku) at Wikipedia.
+   * [Mathematics of Sudoku](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku) at Wikipedia.
+   * [Sudoku as a Constraint Problem](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.88.2964) by Helmut Simonis.
    * [Sudoku as a SAT Problem](http://sat.inesc-id.pt/~ines/publications/aimath06.pdf) by Inês Lynce and Joël Ouaknine. 
    * [Analysis of Sudoku Solving Algorithms ](http://www.enggjournals.com/ijet/docs/IJET17-09-03-043.pdf) by M.Thenmozhi, Palash Jain, Sai Anand, Saketh Ram (2017)
-      * This paper references [Dancing links](https://arxiv.org/abs/cs/0011047) by Donald Knuth
+      * This paper references the Dancing Links algorithm by Donal Knuth. Paper: [Dancing links](https://arxiv.org/abs/cs/0011047): _"The author presents
+        two tricks to accelerate depth-first search algorithms for a class of combinatorial puzzle problems, such as tiling a tray by a fixed set of polyominoes."_
    * [Complexity and Completeness of Finding Another Solution and Its Application to Puzzles](https://www-imai.is.s.u-tokyo.ac.jp/~yato/data2/SIGAL87-2.pdf) by Takayuki YATO and Takahiro SETA: The "Number Place" (i.e. "Sudoku") problem is [NP-complete](https://www.scottaaronson.com/democritus/lec6.html) (i.e. belongs to the set of "hardest" problems in NP).
    * [Sudoku Puzzle Complexity](https://www.researchgate.net/publication/264572573_Sudoku_Puzzle_Complexity) by Sian K. Jones, Paul A. Roach and Stephanie Perkins (2009): How "hard" a puzzle feels in an informal sense.
    * [A Hybrid Approach for the Sudoku Problem: Using Constraint Programming in Iterated Local Search](https://ieeexplore.ieee.org/document/7887637), 
