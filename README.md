@@ -39,7 +39,8 @@ With languages that provide the right abstraction you can go right for it in a f
    * [Sudoku Puzzle Complexity](https://www.researchgate.net/publication/264572573_Sudoku_Puzzle_Complexity) by Sian K. Jones, Paul A. Roach and Stephanie Perkins (2009): How "hard" a puzzle feels in an informal sense.
    * [A Hybrid Approach for the Sudoku Problem: Using Constraint Programming in Iterated Local Search](https://ieeexplore.ieee.org/document/7887637), 
      appears in _IEEE Intelligent Systems (Volume: 32, Issue: 2, Mar.-Apr. 2017)_ 
-      * This article is paywalled but a (non-beautified) version of the paper as well as the software that goes with it can be officially found [here](https://www.dbai.tuwien.ac.at/research/project/arte/sudoku/)). 
+      * This article is paywalled but a (non-beautified) version of the paper as well as the software that goes with it can
+        officially be found [here](https://www.dbai.tuwien.ac.at/research/project/arte/sudoku/). 
       * The paper describes a hybrid approach to solve Sudoku problems of rank 3 to 5. Experiments show that Constraint Propgation does not do well
         on rank 4 problems. For rank 5 problems, only the hybrid approach and a simulated annealing-based algorithm still manage, with the hybrid
         approach needing much less time to find an optimal solution (i.e. a solution fulfilling all constraints). At rank 5, problems around ~45%
