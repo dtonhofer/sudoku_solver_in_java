@@ -34,12 +34,23 @@ With languages that provide the right abstraction you can go right for it in a f
    * [Sudoku](https://en.wikipedia.org/wiki/Sudoku) at Wikipedia.
    * [Mathematics of Sudoku](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku) at Wikipedia.   
    * [Sudoku as a Constraint Problem](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.88.2964) by Helmut Simonis.
-   * [Sudoku as a SAT Problem](http://sat.inesc-id.pt/~ines/publications/aimath06.pdf) by Inês Lynce and Joël Ouaknine. 
-   * [Analysis of Sudoku Solving Algorithms ](http://www.enggjournals.com/ijet/docs/IJET17-09-03-043.pdf) by M.Thenmozhi, Palash Jain, Sai Anand, Saketh Ram (2017)
-      * This paper references the Dancing Links algorithm by Donal Knuth. Paper: [Dancing links](https://arxiv.org/abs/cs/0011047): _"The author presents
-        two tricks to accelerate depth-first search algorithms for a class of combinatorial puzzle problems, such as tiling a tray by a fixed set of polyominoes."_
-   * [Complexity and Completeness of Finding Another Solution and Its Application to Puzzles](https://www-imai.is.s.u-tokyo.ac.jp/~yato/data2/SIGAL87-2.pdf) by Takayuki YATO and Takahiro SETA: The "Number Place" (i.e. "Sudoku") problem is [NP-complete](https://www.scottaaronson.com/democritus/lec6.html) (i.e. belongs to the set of "hardest" problems in NP).
-   * [Sudoku Puzzle Complexity](https://www.researchgate.net/publication/264572573_Sudoku_Puzzle_Complexity) by Sian K. Jones, Paul A. Roach and Stephanie Perkins (2009): How "hard" a puzzle feels in an informal sense.
+   * [Sudoku as a SAT Problem](http://sat.inesc-id.pt/~ines/publications/aimath06.pdf) (PDF) by Inês Lynce and Joël Ouaknine. We read:
+     _"In the extended encoding, the resulting CNF formula will have 11,988 clauses, apart from the unit clauses representing
+     the pre-assigned entries. From these clauses, 324 clauses are nine-ary and the remaining 11,664 clauses are binary.
+     The nine-ary clauses result from the four sets of at-least-one clauses (4⋅9⋅9 = 324). The 11,664 binary clauses
+     result from the four sets of at-most-one clauses (4⋅9⋅9·[36 pairings of 2 elements from 9])."_
+   * [Analysis of Sudoku Solving Algorithms ](http://www.enggjournals.com/ijet/docs/IJET17-09-03-043.pdf) by
+     M.Thenmozhi, Palash Jain, Sai Anand, Saketh Ram (2017)
+      * This paper references the "Dancing Links" algorithm by Donald Knuth described in:
+        [Dancing links](https://arxiv.org/abs/cs/0011047): _"The author presents two tricks to accelerate depth-first
+        search algorithms for a class of combinatorial puzzle problems, such as tiling a tray by a fixed set of polyominoes."_
+   * [Complexity and Completeness of Finding Another Solution and Its Application to Puzzles](https://www-imai.is.s.u-tokyo.ac.jp/~yato/data2/SIGAL87-2.pdf) 
+      by Takayuki YATO and Takahiro SETA: The "Number Place" (i.e. Sudoku) problem is [NP-complete](https://www.scottaaronson.com/democritus/lec6.html) 
+      (i.e. belongs to the set of "hardest" problems in NP). In the paper _Sudoku as a SAT Problem_ we also read _"Note, however, that 
+      generalized Sudoku puzzles satisfying "has only one solution" and "can be solved with only reasoning, i.e. with no search" are 
+      polynomial-time solvable."_ 
+   * [Sudoku Puzzle Complexity](https://www.researchgate.net/publication/264572573_Sudoku_Puzzle_Complexity) by Sian K. Jones, 
+     Paul A. Roach and Stephanie Perkins (2009): How "hard" a puzzle feels in an informal sense.
    * [A Hybrid Approach for the Sudoku Problem: Using Constraint Programming in Iterated Local Search](https://ieeexplore.ieee.org/document/7887637), 
      appears in _IEEE Intelligent Systems (Volume: 32, Issue: 2, Mar.-Apr. 2017)_ 
       * This article is paywalled but a (non-beautified) version of the paper as well as the software that goes with it can
