@@ -32,7 +32,7 @@ With languages that provide the right abstraction you can go right for it in a f
 ## Some reading
 
    * [Sudoku](https://en.wikipedia.org/wiki/Sudoku) at Wikipedia.
-   * [Mathematics of Sudoku](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku) at Wikipedia.
+   * [Mathematics of Sudoku](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku) at Wikipedia.   
    * [Sudoku as a Constraint Problem](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.88.2964) by Helmut Simonis.
    * [Sudoku as a SAT Problem](http://sat.inesc-id.pt/~ines/publications/aimath06.pdf) by Inês Lynce and Joël Ouaknine. 
    * [Analysis of Sudoku Solving Algorithms ](http://www.enggjournals.com/ijet/docs/IJET17-09-03-043.pdf) by M.Thenmozhi, Palash Jain, Sai Anand, Saketh Ram (2017)
@@ -49,4 +49,10 @@ With languages that provide the right abstraction you can go right for it in a f
         approach needing much less time to find an optimal solution (i.e. a solution fulfilling all constraints). At rank 5, problems around ~45%
         of fixed cells cause both approaches to fail at finding an optimal solution.
    * [Solving and Analyzing Sudokus with Cultural Algorithms](https://www.researchgate.net/publication/224330246_Solving_and_Analyzing_Sudokus_with_Cultural_Algorithms) by Timo Mantere and Janne Koljonen: On using genetic algorithms on Sudoku problems.
-   
+
+### Specifically about the "All Different" Constraint
+
+   * [A filtering algorithm for constraints of difference in CSPs.](https://aaai.org/Papers/AAAI/1994/AAAI94-055.pdf) by Jean-Charles Régin.
+     Appears in _Proceedings of the National Conference on Artificial Intelligence (AAAI), pp. 362-367, 1994_
+   * [The Alldifferent Constraint: A Survey](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.104.8388) by Willem-Jan van Hoeve, 2001.
+
