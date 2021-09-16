@@ -12,6 +12,13 @@ If you run `Sudoku.main()`, default initial settings will be loaded into the `Bo
 
 Take a log at `example.log` for example output.
 
+## TODO
+
+- Read the initial board as text input from the command line and output a more nicely printed board.
+- The "alldifferent" constraint misses the trick that if there are n decision variables with the same domain of size n, none of the values
+  in that domain can appear in any decision variable being monitored by that constraint. 
+- More tests.
+
 ## Done differently
 
 With languages that provide the right abstraction you can go right for it in a few lines:
