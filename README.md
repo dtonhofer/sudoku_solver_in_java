@@ -73,4 +73,6 @@ With languages that provide the right abstraction you can go right for it in a f
    * [A filtering algorithm for constraints of difference in CSPs.](https://aaai.org/Papers/AAAI/1994/AAAI94-055.pdf) by Jean-Charles Régin.
      Appears in _Proceedings of the National Conference on Artificial Intelligence (AAAI), pp. 362-367, 1994_
    * [The Alldifferent Constraint: A Survey](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.104.8388) by Willem-Jan van Hoeve, 2001.
-
+   * In MiniZinc:
+     * [`all_different`](https://www.minizinc.org/doc-2.5.5/en/lib-globals.html?highlight=all_different#index-29) (although the preferred spelling is `alldifferent`, as in the [tutorial](https://www.minizinc.org/doc-2.5.5/en/predicates.html?highlight=alldifferent)
+   * The entry for [alldifferent](http://sofdem.github.io/gccat/gccat/Calldifferent.html) in the [Global Constraint Catalog](http://sofdem.github.io/gccat/gccat/)
