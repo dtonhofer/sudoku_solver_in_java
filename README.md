@@ -1,8 +1,8 @@
 # Sudoku Solver in Java
 
-A simple Sudoku Solver (for order-3 problems i.e. 9x9 boards) in standard Java 16.
+A simple Sudoku Solver (for order-3 problems i.e. 9x9 boards) in standard Java.
 
-[JUnit Jupiter](https://junit.org/junit5/docs/current/user-guide/) is used as testing framework for (minimal) testing.
+[JUnit Jupiter](https://junit.org/junit5/docs/current/user-guide/) is used as testing framework for (quite minimal) testing.
 
 This was written to test the idea of "Constraint Solving" and "Constraint Propagation" on a simple problem.
 
@@ -18,6 +18,11 @@ Take a log at `example.log` for example output.
 - The "alldifferent" constraint misses the trick that if there are n decision variables with the same domain of size n, none of the values
   in that domain can appear in any decision variable being monitored by that constraint. 
 - More tests.
+
+## History
+
+- 2021-10-05 Original version in Java 16.
+- 2024-06-19 Updated for Java 21, reorganized into a "project", fixed code according to IDE suggestions.
 
 ## Done differently
 
