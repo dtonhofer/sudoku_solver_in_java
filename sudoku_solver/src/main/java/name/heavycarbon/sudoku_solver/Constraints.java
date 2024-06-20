@@ -1,9 +1,9 @@
-package name.heatwarp.sudoku_solver;
+package name.heavycarbon.sudoku_solver;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-import name.heatwarp.sudoku_solver.ValueCellBijectionConstraint.Type;
+import name.heavycarbon.sudoku_solver.ValueCellBijectionConstraint.Type;
 
 /**
  * All the constraints that are active for a Sudoku board.

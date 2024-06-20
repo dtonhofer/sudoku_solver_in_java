@@ -1,4 +1,4 @@
-package name.heatwarp.sudoku_solver;
+package name.heavycarbon.sudoku_solver;
 
 public class Setting {
 

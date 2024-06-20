@@ -1,10 +1,10 @@
-package name.heatwarp.sudoku_solver;
+package name.heavycarbon.sudoku_solver;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import name.heatwarp.sudoku_solver.ValueCellBijectionConstraint.UpdateResult;
+import name.heavycarbon.sudoku_solver.ValueCellBijectionConstraint.UpdateResult;
 
 /*
 

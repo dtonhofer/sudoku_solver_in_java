@@ -1,4 +1,4 @@
-package name.heatwarp.sudoku_solver;
+package name.heavycarbon.sudoku_solver;
 
 import java.util.*;
 import java.util.Map.Entry;

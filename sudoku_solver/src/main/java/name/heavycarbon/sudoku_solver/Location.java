@@ -1,4 +1,4 @@
-package name.heatwarp.sudoku_solver;
+package name.heavycarbon.sudoku_solver;
 
 /**
  * An immutable (row,col) tuple that can be used as key in maps.
