@@ -12,6 +12,22 @@ If you run `Sudoku.main()`, default initial settings will be loaded into the `Bo
 
 Take a log at `example.log` for example output.
 
+```
++----+----+----+----+----+----+----+----+----+
+| v4 . v2 . v9 | v7 . v3 . v5 | v6 . v8 . v1 |
+| v7 . v8 . v3 | v6 . v1 . v4 | v5 . v2 . v9 |
+| v6 . v1 . v5 | v8 . v2 . v9 | v4 . v3 . v7 |
++----+----+----+----+----+----+----+----+----+
+| v2 . v5 . v1 | v3 . v4 . v8 | v7 . v9 . v6 |
+| v3 . v6 . v4 | v9 . v5 . v7 | v8 . v1 . v2 |
+| v8 . v9 . v7 | v2 . v6 . v1 | v3 . v4 . v5 |
++----+----+----+----+----+----+----+----+----+
+| v9 . v3 . v6 | v4 . v7 . v2 | v1 . v5 . v8 |
+| v5 . v4 . v2 | v1 . v8 . v6 | v9 . v7 . v3 |
+| v1 . v7 . v8 | v5 . v9 . v3 | v2 . v6 . v4 |
++----+----+----+----+----+----+----+----+----+
+```
+
 ## TODO
 
 - Read the initial board as text input from the command line and output a more nicely printed board.
