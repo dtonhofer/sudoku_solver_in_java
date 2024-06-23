@@ -10,7 +10,7 @@ Currently the intial board is not given on the command line but is constructed t
 
 If you run `Sudoku.main()`, default initial settings will be loaded into the `Board` structure and the corresponding problem will be solved.
 
-Take a log at `example.log` for example output.
+Take a log at [`example.log`](example.log) for example output.
 
 ```
 +----+----+----+----+----+----+----+----+----+
