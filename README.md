@@ -4,11 +4,16 @@ A simple Sudoku Solver (for order-3 problems i.e. 9x9 boards) in standard Java.
 
 [JUnit Jupiter](https://junit.org/junit5/docs/current/user-guide/) is used as testing framework for (quite minimal) testing.
 
-This was written to test the idea of "Constraint Solving" and "Constraint Propagation" on a simple problem.
+This was written to test the idea of "Constraint Solving" and "Constraint Propagation" on a simple problem using a general programming language
+while pursuing the course [Solving Algorithms for Discrete Optimization](https://www.coursera.org/learn/solving-algorithms-discrete-optimization).
 
-Currently the intial board is not given on the command line but is constructed through a dedicated method. Take a look at the test methods for this.
+I guess the most interesting part of it is finding out that the natural way to backtrack out of a search branch that is found to violate some constraint is to use Java's exception mechanism. Throw to backtrack!
 
-If you run `Sudoku.main()`, default initial settings will be loaded into the `Board` structure and the corresponding problem will be solved.
+Currently the intial board is not given on the command line but is constructed through a dedicated method. 
+Take a look at the [test methods](https://github.com/dtonhofer/sudoku_solver_in_java/blob/main/sudoku_solver/src/test/java/name/heavycarbon/sudoku_solver/TestSudoku.java) for this.
+
+If you run [`Sudoku.main()`](https://github.com/dtonhofer/sudoku_solver_in_java/blob/main/sudoku_solver/src/main/java/name/heavycarbon/sudoku_solver/Sudoku.java),
+default initial settings will be loaded into the `Board` structure and the corresponding problem will be solved.
 
 Take a log at [`example.log`](example.log) for example output.
 
